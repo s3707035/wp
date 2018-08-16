@@ -6,7 +6,7 @@
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="../css/skeleton.css">
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/skeleton.css">
     <script src='../wireframe.js'></script>
   </head>
 
@@ -17,9 +17,7 @@
     </header>
 
     <nav>
-      <div>
-          <button onclick="myLogin()">Login</button>
-          Put website navigation links here</div>
+      <div>Put website navigation links here</div>
     </nav>
 
     <main>
@@ -36,11 +34,6 @@
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
-<script>
-function myLogin() {
-    location.replace("https://titan.csit.rmit.edu.au/~s3707035/wp/a2/Login.php")
-}
-</script>
 
   </body>
 </html>
