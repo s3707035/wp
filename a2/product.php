@@ -9,13 +9,15 @@ s<!DOCTYPE html>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/skeleton.css">
     <script src='../wireframe.js'></script>
   </head>
+    
 <section id='Product' class='id'>
   <body>
+<header>
+        
+        <div><img src='../../media/logo.png' alt='Sell My Stuff' height=200 />Product</div>
+        </header>
 
-    <header>
-      <div>Put company logo and name here</div>
-    </header>
-
+      
     <nav>
       <div>Put website navigation links here</div>
     </nav>
@@ -31,18 +33,21 @@ s<!DOCTYPE html>
       </article>
         
 <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post'>
-  Quantity
-  <input type="number" placeholder="0" name="qty" value=' ' min="1" max="1000"  required><br>
   
-  <select name='Option'required>
+ <input type="hidden" id="product ID" name="id" value="#98734">    
+    <br>
+    
+  <select name='option'required>
   <option selected='true' disabled>Select One</option>
   <option value="Small">Small</option>
   <option value="Large">Large</option>
   </select>
-   <input type="hidden" id="product ID" name="Id" value="#98734">
     
-    <br>
-         
+  <br>
+  Quantity
+  <input type="number" placeholder="0" name="qty" value=' ' min="1" max="1000"  required>  
+  <br>
+           
   <button type="submit">Submit</button>
   
 </form>

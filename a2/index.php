@@ -38,7 +38,7 @@
     </footer>
 <script>
 function myLogin() {
-    location.replace("https://titan.csit.rmit.edu.au/~s3707035/wp/a2/Login.php")
+    location.replace("https://titan.csit.rmit.edu.au/~s3707035/wp/a2/login.php")
 }
 </script>
 

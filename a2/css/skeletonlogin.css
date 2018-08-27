@@ -1,0 +1,109 @@
+/* Make HTML and body content viewable, layout to fill window */
+html,
+body
+ {  
+    background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
+    background-attachment: fixed; 
+    background-size: cover;
+     }
+
+html {
+  min-height:100vh;
+}
+
+
+}
+body {
+  min-height:calc(100vh - 40px);
+}
+
+
+/* Give all semantic body elements uniform layout style */
+header{
+  margin-top: 10px;
+  padding: 5px;} 
+nav,
+main{
+  padding: 1px;
+  }
+
+footer
+{
+margin-right: 1000px;
+    margin-top: auto;
+    font-size: 20px;
+
+}
+
+aside,
+section{ margin-top: 0px;
+    margin-bottom: 0px;
+  padding: 1px;}
+article,
+details,
+div,
+/* Give each semantic body element a different color */
+header,
+nav,
+main,
+footer,
+article,
+aside,
+section,
+details,
+div,
+
+/* Some basic styling for the starting page */
+
+header
+ 
+main
+{ font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+    text-align: center;}
+
+.homebutton{
+	margin-right: 1400px;
+	}   
+
+.button {
+    background-color: #6495ED;
+    width: 150px;
+    height:auto;
+    border: none;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: .1em; 
+    padding: 6px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 5px #76a0ef;}
+	
+.button:hover {
+    background-color: #8db0f2;
+     box-shadow: 5px 5px #a4c0f4;
+}
+
+section {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: .2em; 
+    text-shadow: 3px 3px #3c3c3c;}
+
+
+nav,
+
+footer{font-family: 'Indie Flower', cursive;
+    font-size-adjust: 20px;
+}
+
+
+
