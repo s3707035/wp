@@ -87,7 +87,8 @@ main
 	opacity: .3;}
 
 .footers
- {float:left;}
+ {float:left;
+}
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
@@ -96,11 +97,8 @@ section {
     text-shadow: 3px 3px #3c3c3c;}
 
 
-nav,
 
 
-
-footer,
 
 
 

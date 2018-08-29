@@ -75,6 +75,35 @@ main
 	margin-right: 1400px;
 	}   
 
+.products{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+}
+
+.products:hover{
+	width: 200px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+.login{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+  }
+
+.login:hover{
+	width: 120px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+
+
+
 .overlay {
   position: absolute;
   border-radius: 200px;
@@ -109,8 +138,12 @@ table, th, td{
 }
 
 table{
+	position:absolute;
+	top: 150px;
 	table-layout: fixed;
-	width: 80%;}
+	width: 80%;
+	margin-left: 300px;
+	}
     
 p.price{
 	position: absolute; 
@@ -140,7 +173,6 @@ text-align: center;}
 	width: 320px;
 	height: 620px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/whitelamp1.JPG") no-repeat;
-	;
 	}
 
 select {
@@ -193,7 +225,9 @@ input{
 
 header,
 
-.footer  {float:left;}
+.footer  {
+	margin-top: 350px;
+	float:left;}
 footer,
 
 

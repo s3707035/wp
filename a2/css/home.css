@@ -64,6 +64,46 @@ main
 	}   
 
 
+
+.product{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+}
+
+.product:hover{
+	width: 200px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+.products{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+}
+
+.products:hover{
+	width: 200px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+.login{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+  }
+
+.login:hover{
+	width: 120px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
 .maintable{
     font-family: 'Slabo 27px', serif, sans-serif;
     border-collapse: collapse;

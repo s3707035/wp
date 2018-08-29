@@ -18,9 +18,9 @@ body {
 
 /* Give all semantic body elements uniform layout style */
 header,
-.head{
+p.head{
 	position: absolute; 
-	top: 0;
+	top: -25px;
  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 120px;
   letter-spacing: .1em; 
@@ -91,6 +91,37 @@ main
 .header:hover .overlay {
 	opacity: .3;}
 
+
+.products{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+}
+
+.products:hover{
+	width: 200px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+.login{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+  }
+
+.login:hover{
+	width: 120px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+
+
+
+
 section {
   font-family: 'Love Ya Like A Sister', cursive;
   font-weight: bold;
@@ -112,6 +143,8 @@ table, th, td{
 }
 
 table{
+	position: absolute;
+	top: 220px;
 	table-layout: fixed;
 	width: 80%;}
     
@@ -214,9 +247,11 @@ text-align: center;}
 		
 		
 		
-header,
 
-.footer  {float:left;}
+
+.footer {
+	margin-top: 450px;
+	float:left;}
 footer,
 
 

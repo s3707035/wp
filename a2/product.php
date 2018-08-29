@@ -22,7 +22,10 @@
 			  <div class="overlay"></div>
 		  </a>
 		   
-		   
+		    <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/products.php" style="text-decoration:none">
+				<p class="products">PRODUCTS</p></a>
+		   <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/login.php" style="text-decoration:none">
+			   <p class="login">LOGIN</p></a>
          <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
 
          </nav></div>

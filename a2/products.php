@@ -12,20 +12,27 @@
     
 	 
 		 
-		  
-	
-	
 	<body>
-       <div class="header"> <nav>
+	<div class="header"> <nav>
 		  <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/index.php">
 			 <img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
 			  <div class="overlay"></div>
 		  </a>
 		   
+		    <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/product.php" style="text-decoration:none">
+				<p class="products">PRODUCT</p></a>
+		   <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/login.php" style="text-decoration:none">
+			   <p class="login">LOGIN</p></a>
+		
          <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
 
          </nav></div>
-		<header><h1 class="head">Sale</h1></header>
+
+		  
+	
+	
+	
+			<header><p class="head">Sale</p></header>
 
      
  
