@@ -9,10 +9,12 @@
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='skeletonlogin' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/css/skeletonlogin.css">
     
-      <div> <header>
+      <div class="header"> <header>
 		  <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/index.php">
-			 <img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=300 /></a>
-         <link href="//fonts.googleapis.com/css?family=Indie+Flower|Short+Stack" rel="stylesheet">
+		   <img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=300 />
+		  <div class="overlay"></div>
+		  </a>
+        <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
          </header></div>
 	  
 	
@@ -32,8 +34,11 @@
           </div>
       
            <div> 
-        <button class="button">Login</button>
+        <button type="submit" class="button"><img src="../../media/signin.png" alt="Submit" style="height:70px"/>
+			   </button>
           </div>
+		  
+		  
 		  
  <script>
 function emailFunction() {
@@ -59,12 +64,11 @@ function formvalidateFunction(){
           </main>
 
     
-    <footer>
-      <div>&copy;<script>
+    <footer class="footer">
+		<div><font size="+0"> &copy; <script>
         document.write(new Date().getFullYear());
-          </script> Valerie Lok, s3707035.</div>
+          </script> Valerie Lok, s3707035</font></div>
         </footer>
 
    
     
-

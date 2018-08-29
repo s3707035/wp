@@ -2,9 +2,7 @@
 html,
 body
  {  
-    background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
-    background-attachment: fixed; 
-    background-size: cover;
+    
      }
 
 html {
@@ -25,7 +23,8 @@ header{
 
 button{
   border: none;
-	background: transparent;}
+  background: transparent;
+}
 nav,
 main{
   padding: 1px;
@@ -56,28 +55,39 @@ div,
 header
  
 main
-{ font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 35px;
-    text-align: center;}
+{ font-family: 'Slabo 27px', serif;
+  font-size: 40px;
+    }
 
 .homebutton{
 	margin-right: 1400px;
 	}   
 
+.minusbutton img {
+    margin-right: 700px;}
+	
 .button:hover {
-    background-color: #D3D3D3;
-	border-radius: 50px;
-    
+    background-color: #606060;
+     	border-radius: 50px;
 }
 
+.maintable{
+    font-family: 'Slabo 27px', serif, sans-serif;
+    border-collapse: collapse;
+	width: 100%;}
+	
+.maintable td{ 
+    font-size: 20px;
+  }
+	
 .overlay {
   position: absolute;
   border-radius: 200px;
-  margin-top: 10px;
-  margin-left: 580px;
-  padding: 5px;top: 0;
-  height: 43%;
-  width: 21%;
+  margin-top: 7px;
+  margin-left: 0px;
+  padding: 0px;top: 0;
+  height: 30%;
+  width: 13%;
   opacity: 0;
   transition: .5s ease;
   background-color: #D8D8D8;
@@ -88,15 +98,16 @@ main
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: bold;
   font-size: 80px;
-  letter-spacing: .1em; 
+  letter-spacing: .2em; 
     text-shadow: 3px 3px #3c3c3c;}
 
 
 nav,
 
 .footer {
-	margin-right: 1200px;
+	margin-right: 1150px;
 	margin-top: auto;}
 
 footer,
