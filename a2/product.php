@@ -91,7 +91,7 @@ function minusFunction() {
     </main>
 
 <footer class="footer">
-		<div><font size="+1">&copy; <script>
+		<div><font size="0">&copy; <script>
         document.write(new Date().getFullYear());
           </script> Valerie Lok, s3707035</font></div>
         </footer>

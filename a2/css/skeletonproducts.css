@@ -1,0 +1,116 @@
+/* Make HTML and body content viewable, layout to fill window */
+html,
+body
+ {  
+    
+     }
+
+html {
+  min-height:100vh;
+}
+
+
+}
+body {
+  min-height:calc(100vh - 40px);
+}
+
+
+/* Give all semantic body elements uniform layout style */
+header{
+  margin-top: 10px;
+  padding: 5px;} 
+
+button{
+  border: none;
+  background: transparent;
+}
+nav,
+main{
+  padding: 1px;
+  }
+
+footer,
+
+aside,
+section{ margin-top: 0px;
+    margin-bottom: 0px;
+  padding: 1px;}
+article,
+details,
+div,
+/* Give each semantic body element a different color */
+header,
+nav,
+main,
+footer,
+article,
+aside,
+section,
+details,
+div,
+
+/* Some basic styling for the starting page */
+
+header
+ 
+main
+{ font-family: 'Slabo 27px', serif;
+  font-size: 40px;
+    }
+
+.homebutton{
+	margin-right: 1400px;
+	}   
+
+.minusbutton img {
+    margin-right: 700px;}
+	
+.button:hover {
+    background-color: #606060;
+     	border-radius: 50px;
+}
+
+.maintable{
+    font-family: 'Slabo 27px', serif, sans-serif;
+    border-collapse: collapse;
+	width: 100%;}
+	
+.maintable td{ 
+    font-size: 20px;
+  }
+	
+.overlay {
+  position: absolute;
+  border-radius: 200px;
+  margin-top: 7px;
+  margin-left: 0px;
+  padding: 0px;top: 0;
+  height: 30%;
+  width: 13%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #D8D8D8;
+}
+
+.header:hover .overlay {
+	opacity: .3;}
+
+section {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: .2em; 
+    text-shadow: 3px 3px #3c3c3c;}
+
+
+nav,
+
+.footer {
+	margin-right: 1150px;
+	margin-top: auto;}
+
+footer,
+
+
+
