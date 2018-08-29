@@ -17,15 +17,27 @@ body {
 
 
 /* Give all semantic body elements uniform layout style */
-header{
-  margin-top: 10px;
+header,
+.head{
+	position: absolute; 
+	top: 0;
+ font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 120px;
+  letter-spacing: .1em; 
+  margin-left: 310px;
+	
+
+ 
+}
+nav{
+  margin-top: 0px;
   padding: 5px;} 
 
 button{
   border: none;
   background: transparent;
 }
-nav,
+header,
 main{
   padding: 1px;
   }
@@ -52,7 +64,7 @@ div,
 
 /* Some basic styling for the starting page */
 
-header
+header,
  
 main
 { font-family: 'Slabo 27px', serif;
@@ -63,23 +75,6 @@ main
 	margin-right: 1400px;
 	}   
 
-.minusbutton img {
-    margin-right: 700px;}
-	
-.button:hover {
-    background-color: #606060;
-     	border-radius: 50px;
-}
-
-.maintable{
-    font-family: 'Slabo 27px', serif, sans-serif;
-    border-collapse: collapse;
-	width: 100%;}
-	
-.maintable td{ 
-    font-size: 20px;
-  }
-	
 .overlay {
   position: absolute;
   border-radius: 200px;
@@ -103,13 +98,102 @@ section {
   letter-spacing: .2em; 
     text-shadow: 3px 3px #3c3c3c;}
 
+table, th, td{
+	margin-left: 220px;    
+	font-family: 'Slabo 27px', serif, sans-serif;
+    border-collapse: collapse;
+	padding-top: 40px;
+	padding-right: 40px;
+	padding-left: 40px;
+	
+}
 
-nav,
+table{
+	table-layout: fixed;
+	width: 80%;}
+    
+p.price{
+	position: absolute; 
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 400px;
+	font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 50px;
+   
+	
+}
+p.body {margin-top: 0px;
+	font-size: 32px;
+text-align: center;}
 
-.footer {
-	margin-right: 1150px;
-	margin-top: auto;}
+.overlayglamp{
+	width: 320px;
+	height: 620px;
+	padding-top: 0px;
+	padding-right: 40px;
+	padding-left: 40px;
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/greenlamp1.JPG") no-repeat;
+	transition: .6s ease;
+}
 
+.overlayglamp:hover {
+	width: 320px;
+	height: 620px;
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/whitelamp1.JPG") no-repeat;
+	;
+	}
+
+select {
+	margin-top: 0px;
+	border-color: #696969;
+	border-radius: 25px;
+	width: 250px;
+   font-family: 'Slabo 27px', serif, sans-serif;
+   font-size: 30px;
+	font-weight: bold;
+	
+}
+.buybutton:hover{
+    background-color: #696969;
+	border-radius: 50px;}
+
+p.quanity {
+  font-family: 'Slabo 27px', serif, sans-serif;
+   font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-left: 8px;}
+
+.minusbutton:hover {
+	background-color: #D0D0D0;
+	border-radius: 30px;
+	}
+
+.plusbutton:hover {
+	background-color: #D0D0D0;
+	border-radius: 30px;
+	}
+
+input{ 
+	border-color: #696969;
+	border-radius: 15px;
+	width: 80px;
+   font-family: 'Slabo 27px', serif, sans-serif;
+   font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+.buybutton{
+	margin-top: 50px;
+}
+    
+	
+
+header,
+
+.footer  {float:left;}
 footer,
 
 

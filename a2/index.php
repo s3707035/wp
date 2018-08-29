@@ -17,11 +17,9 @@
 	
 	<body>
        <div class="header"> <header>
-		  <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/index.php">
+		 
 			 <img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
-			  <div class="overlay"></div>
-		  </a>
-		   
+				  
          <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
 
          </header></div>

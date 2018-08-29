@@ -64,8 +64,8 @@ function formvalidateFunction(){
           </main>
 
     
-    <footer class="footer">
-		<div><font size="+0"> &copy; <script>
+    <footer>
+		<div class="footers"><font size="+0"> &copy; <script>
         document.write(new Date().getFullYear());
           </script> Valerie Lok, s3707035</font></div>
         </footer>

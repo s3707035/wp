@@ -63,13 +63,6 @@ main
 	margin-right: 1400px;
 	}   
 
-.minusbutton img {
-    margin-right: 700px;}
-	
-.button:hover {
-    background-color: #606060;
-     	border-radius: 50px;
-}
 
 .maintable{
     font-family: 'Slabo 27px', serif, sans-serif;
@@ -80,21 +73,6 @@ main
     font-size: 20px;
   }
 	
-.overlay {
-  position: absolute;
-  border-radius: 200px;
-  margin-top: 7px;
-  margin-left: 0px;
-  padding: 0px;top: 0;
-  height: 30%;
-  width: 13%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #D8D8D8;
-}
-
-.header:hover .overlay {
-	opacity: .3;}
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
@@ -106,9 +84,7 @@ section {
 
 nav,
 
-.footer {
-	margin-right: 1150px;
-	margin-top: auto;}
+.footer  {float:left;}
 
 footer,
 

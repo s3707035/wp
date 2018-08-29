@@ -86,6 +86,9 @@ main
 .header:hover .overlay {
 	opacity: .3;}
 
+.footers
+ {float:left;}
+
 section {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 80px;
@@ -95,9 +98,7 @@ section {
 
 nav,
 
-.footer {
-	margin-right: 1200px;
-	margin-top: auto;}
+
 
 footer,
 
