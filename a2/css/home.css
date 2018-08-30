@@ -1,22 +1,14 @@
-/* Make HTML and body content viewable, layout to fill window */
 html,
-body
- {  
+body{  
     background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
     background-attachment: fixed; 
-    background-size: cover;
-     }
+    background-size: cover;}
 
 html {
-  min-height:100vh;
-}
+  min-height:100vh;}
 
-
-}
 body {
-  min-height:calc(100vh - 40px);
-}
-
+  min-height:calc(100vh - 40px);}
 
 /* Give all semantic body elements uniform layout style */
 header{
@@ -25,13 +17,12 @@ header{
 
 button{
   border: none;
-  background: transparent;
-}
+  background: transparent;}
+
 nav{
 	position:absolute;
 	top:13px;
-	left:13px;
-}
+	left:13px;}
 
 table, th, td{
 	margin-left: 220px;    
@@ -39,265 +30,186 @@ table, th, td{
     border-collapse: collapse;
 	padding-top: 40px;
 	padding-right: 40px;
-	padding-left: 40px;
-	
-}
-
+	padding-left: 40px;}
 
 table{
 	position:absolute;
 	top: 200px;
 	table-layout: fixed;
 	width: 80%;
-	margin-left: 300px;
-	}
+	margin-left: 300px;}
     
-
 main{
-  padding: 1px;
-  }
-
-footer,
-
-aside,
-section{ margin-top: 0px;
-    margin-bottom: 0px;
   padding: 1px;}
-article,
-details,
-div,
-/* Give each semantic body element a different color */
-header,
-nav,
-main,
+
 footer,
-article,
+
 aside,
-section,
+
+section{ 
+	margin-top: 0px;
+    margin-bottom: 0px;
+  	padding: 1px;}
+
+article,
+
 details,
+
+div,
+
+/* Give each semantic body element a different color */
+
+header,
+
+nav,
+
+main,
+
+footer,
+
+article,
+
+aside,
+
+section,
+
+details,
+
 div,
 
 /* Some basic styling for the starting page */
 
 header
- 
 
-main
-{ font-family: 'Slabo 27px', serif;
-  font-size: 40px;
-    }
+main{ 
+	font-family: 'Slabo 27px', serif;
+  	font-size: 40px;}
 
 .homebutton{
-	margin-right: 1400px;
-	}   
-
+	margin-right: 1400px;}   
 
 .overlay {
-  position: absolute;
-  border-radius: 200px;
-  margin-top: 3px;
-  margin-left: 0px;
-  padding: 0px;top: 0;
-  height: 30%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #D8D8D8;
-}
+	position: absolute;
+  	border-radius: 200px;
+  	margin-top: 3px;
+  	margin-left: 0px;
+  	padding: 0px;
+	top: 0;
+  	height: 30%;
+  	width: 100%;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: #D8D8D8;}
 
 .header:hover .overlay {
 	opacity: .3;}
 
-
-
 .product{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-}
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .product:hover{
 	width: 200px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
+	box-shadow: 6px 6px #3300CC;}
 
 .products{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-}
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .products:hover{
 	width: 200px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
+	box-shadow: 6px 6px #3300CC;}
 
 .login{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-  }
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .login:hover{
 	width: 120px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
+	box-shadow: 6px 6px #3300CC;}
 
 .aboutus{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-  }
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .aboutus:hover{
 	width: 120px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
-
+	box-shadow: 6px 6px #3300CC;}
 
 .contactus{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-  }
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .contactus:hover{
 	width: 200px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
+	box-shadow: 6px 6px #3300CC;}
 
 p.head{
 	position: absolute; 
 	top: -25px;
- font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 120px;
-  letter-spacing: .1em; 
-	margin-left: 610px;
-}
+ 	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 120px;
+  	letter-spacing: .1em; 
+	margin-left: 610px;}
 	
-
 p.welcome{font-family: 'Slabo 27px', serif, sans-serif;
- 	  font-size: 35px;
+ 	font-size: 35px;
 	letter-spacing: .1em;
-	text-align: center;
-	
-}
+	text-align: center;}
 
 p.history{
 	position: absolute; 
 	top: 400px;
- font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 100px;
-  letter-spacing: .1em; 
-	margin-left: 300px;
-}
+ 	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 100px;
+  	letter-spacing: .1em; 
+	margin-left: 300px;}
 
-p.historyaboutus{font-family: 'Slabo 27px', serif, sans-serif;
- 	  font-size: 35px;
+p.historyaboutus{
+	font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 35px;
 	margin-top: 150px;
 	letter-spacing: .1em;
-	text-align: center;
-}
+	text-align: center;}
 
 p.phone{
 	position: absolute; 
 	top: 1350px;
- font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 100px;
-  letter-spacing: .1em; 
-	margin-left: 230px;
-}
+ 	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 100px;
+  	letter-spacing: .1em; 
+	margin-left: 230px;}
 
-p.phoneus{font-family: 'Slabo 27px', serif, sans-serif;
- 	  font-size: 35px;
+p.phoneus{
+	font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 35px;
 	margin-top: 160px;
 	letter-spacing: .1em;
-	text-align: center;
-}
-
+	text-align: center;}
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
   font-weight: bold;
   font-size: 80px;
   letter-spacing: .2em; 
-    text-shadow: 3px 3px #3c3c3c;}
-
+  text-shadow: 3px 3px #3c3c3c;}
 
 nav,
 
-.footers  
-	 {float:left;
-      font-family: 'Slabo 27px', serif, sans-serif;
- 	  font-size: 15px;
-	  position: fixed;
-	  bottom:0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footers{
+	float:left;
+    font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: fixed;
+	bottom:0;}
 

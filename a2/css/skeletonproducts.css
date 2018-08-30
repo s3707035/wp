@@ -1,81 +1,85 @@
-/* Make HTML and body content viewable, layout to fill window */
-html{background-color: transparent;}
-body
- {  
+html{
+	background-color: transparent;}
+body{  
     background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
     background-attachment: fixed; 
-    background-size: cover;
-     }
+    background-size: cover;}
 
 html {
-  min-height:100vh;
-}
+  min-height:100vh;}
 
-
-}
 body {
-  min-height:calc(100vh - 40px);
-}
-
+  min-height:calc(100vh - 40px);}
 
 /* Give all semantic body elements uniform layout style */
 header,
+
 p.head{
-	position: absolute; 
-	top: -25px;
- font-family: 'Love Ya Like A Sister', cursive;
+  position: absolute; 
+  top: -25px;
+  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 120px;
   letter-spacing: .1em; 
-  margin-left: 310px;
-	
+  margin-left: 310px;}
 
- 
-}
 nav{
   margin-top: 0px;
   padding: 5px;} 
 
 button{
   border: none;
-  background: transparent;
-}
+  background: transparent;}
+
 header,
+
 main{
-  padding: 1px;
-  }
-
-footer,
-
-aside,
-section{ margin-top: 0px;
-    margin-bottom: 0px;
   padding: 1px;}
-article,
-details,
-div,
-/* Give each semantic body element a different color */
-header,
-nav,
-main,
+
 footer,
-article,
+
 aside,
-section,
+
+section{ 
+	margin-top: 0px;
+    margin-bottom: 0px;
+  	padding: 1px;}
+
+article,
+
 details,
+
+div,
+
+/* Give each semantic body element a different color */
+
+header,
+
+nav,
+
+main,
+
+footer,
+
+article,
+
+aside,
+
+section,
+
+details,
+
 div,
 
 /* Some basic styling for the starting page */
 
 header,
  
-main
-{ font-family: 'Slabo 27px', serif;
-  font-size: 40px;
-    }
+main{ 
+	font-family: 'Slabo 27px', serif;
+    font-size: 40px;}
 
 .homebutton{
-	margin-right: 1400px;
-	}   
+	margin-right: 1400px;}   
 
 .overlay {
   position: absolute;
@@ -87,49 +91,37 @@ main
   width: 13%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #D8D8D8;
-}
+  background-color: #D8D8D8;}
 
 .header:hover .overlay {
-	opacity: .3;}
-
+  opacity: .3;}
 
 .products{
-	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
+  color: #000000;
+  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 40px;
-  letter-spacing: .1em; 
-}
+  letter-spacing: .1em;}
 
 .products:hover{
-	width: 200px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
+   	width: 200px;
+	box-shadow: 6px 6px #3300CC}
 
 .login{
 	color: #000000;
-	 font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  letter-spacing: .1em; 
-  }
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .login:hover{
 	width: 120px;
-	box-shadow: 6px 6px #3300CC
-	 
-}
-
-
-
-
+	box-shadow: 6px 6px #3300CC;}
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
   font-weight: bold;
   font-size: 80px;
   letter-spacing: .2em; 
-    text-shadow: 3px 3px #3c3c3c;}
+  text-shadow: 3px 3px #3c3c3c;}
 
 table, th, td{
 	margin-left: 220px;    
@@ -140,9 +132,7 @@ table, th, td{
     border-collapse: collapse;
 	padding-top: 40px;
 	padding-right: 40px;
-	padding-left: 40px;
-	
-}
+	padding-left: 40px;}
 
 table{
 	position: absolute;
@@ -150,16 +140,17 @@ table{
 	table-layout: fixed;
 	width: 80%;}
     
-
-p.title {margin-top: 0px;
+p.title {
+	margin-top: 0px;
 	margin-bottom: 0px;
 	font-weight: 600;
     font-size: 30px;
 	text-align: center;}
 
-p.body {margin-top: 0px;
+p.body {
+	margin-top: 0px;
 	font-size: 20px;
-text-align: center;}
+	text-align: center;}
 
 .overlayglamp{
 	width: auto;
@@ -168,96 +159,79 @@ text-align: center;}
 	padding-right: 40px;
 	padding-left: 40px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/greenlamp.JPG") no-repeat;
-	transition: .6s ease;
-}
+	transition: .6s ease;}
 
 .overlayglamp:hover {
 	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/whitelamp.JPG") no-repeat;
-	box-shadow: 4px 4px 4px 4px #3300CC;
-	}
-
-
+	box-shadow: 4px 4px 4px 4px #3300CC;}
 
 .overlaycup{
 	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cup.JPG") no-repeat;
-	transition: .6s ease;
-}
+	transition: .6s ease;}
 
 .overlaycup:hover {
 	width: auto;
 	height: 200px;
-	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cup1.JPG") no-repeat;
-	}
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cup1.JPG") no-repeat;}
 
-.overlaycos
-{width: auto;
+.overlaycos{
+	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cos.JPG") no-repeat;
-	transition: .6s ease;
-}
+	transition: .6s ease;}
+
 .overlaycos:hover {
 	width: auto;
 	height: 200px;
-	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cos1.JPG") no-repeat;
-	}
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/cos1.JPG") no-repeat;}
 
-.shoe
-{width: auto;
+.shoe{
+	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/shoes1.JPG") no-repeat;
-	transition: .6s ease;
-	
-}
+	transition: .6s ease;}
 
 .shoe:hover {
 	width: auto;
 	height: 200px;
-	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/shoes2.JPG") no-repeat;
-	}
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/shoes2.JPG") no-repeat;}
 
-.cs {font-weight: bold;}
+.cs {
+	font-weight: bold;}
 
-.bfish
-{width: auto;
+.bfish{
+	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/bfish1.JPG") no-repeat;
-	transition: .6s ease;
-}
+	transition: .6s ease;}
+
 .bfish:hover {
 	width: auto;
 	height: 200px;
-	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/bfish2.JPG") no-repeat;
-	}
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/bfish2.JPG") no-repeat;}
 
-
-.ofish
-{width: auto;
+.ofish{
+	width: auto;
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/ofish2.JPG") no-repeat;
-	transition: .6s ease;
-}
+	transition: .6s ease;}
+
 .ofish:hover {
 	width: auto;
 	height: 200px;
-	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/ofish1.JPG") no-repeat;
-	}
-		
-		
-		
-		
+	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/ofish1.JPG") no-repeat;}
 
+.footers{
+	float:left;
+    font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: fixed;
+	bottom:0;}
 
-.footers  
-	 {float:left;
-      font-family: 'Slabo 27px', serif, sans-serif;
- 	  font-size: 15px;
-	  position: fixed;
-	  bottom:0;
-}
 footer,
 
 
