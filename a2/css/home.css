@@ -92,6 +92,23 @@ main
 	}   
 
 
+.overlay {
+  position: absolute;
+  border-radius: 200px;
+  margin-top: 3px;
+  margin-left: 0px;
+  padding: 0px;top: 0;
+  height: 30%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #D8D8D8;
+}
+
+.header:hover .overlay {
+	opacity: .3;}
+
+
 
 .product{
 	color: #000000;
@@ -182,7 +199,7 @@ p.history{
  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 100px;
   letter-spacing: .1em; 
-	margin-left: 280px;
+	margin-left: 300px;
 }
 
 p.historyaboutus{font-family: 'Slabo 27px', serif, sans-serif;
@@ -190,8 +207,24 @@ p.historyaboutus{font-family: 'Slabo 27px', serif, sans-serif;
 	margin-top: 150px;
 	letter-spacing: .1em;
 	text-align: center;
-	
 }
+
+p.phone{
+	position: absolute; 
+	top: 1350px;
+ font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 100px;
+  letter-spacing: .1em; 
+	margin-left: 230px;
+}
+
+p.phoneus{font-family: 'Slabo 27px', serif, sans-serif;
+ 	  font-size: 35px;
+	margin-top: 160px;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
