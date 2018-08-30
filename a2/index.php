@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="Product" content="Product">
       
-    <title>Product</title>
+    <title>Index</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/css/home.css">
@@ -24,28 +24,42 @@
 		   <a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a2/login.php" style="text-decoration:none">
 			   <p class="login">LOGIN</p></a>
 		
+		<a href="#Aboutus" style="text-decoration:none">
+			   <p class="aboutus">ABOUT</p></a>
+		
+		<a href="Contactus" style="text-decoration:none">
+			   <p class="contactus">CONTACT</p></a>
+		
+		
          <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
 
          </nav></div>
 	
 		 
+		<header><p class="head">Welcome</p></header>
 		  
 	
     
     <main>
         <table id="maintable">
 			<tr>
-			<td>
+			<td><p class="welcome">One person’s junk is another’s treasure” is our motto here at Sell My Stuff, a Melbourne based not-for-profit organization.<br>
+				Promoting the reduction of waste by establishing a marketplace for donated goods that would otherwise be discarded are further used by others.<br>
+				Whether it be minimalising your life or picking up an item at a great price all profits go towards community outreach programs in the Melbourne city area.</p>
           </td>
 				
-			<td>
-             <article id='Website Under Construction'>
-    <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-				</article></td>
+			
 			</tr>
 			<tr>
 			<td>
+				<p class="history">About Us</p>
+			<p class="historyaboutus">sjdfkajdshfkladshflksdah
+					sadfjhaskdfjhd
+					dsfjzdslkjfhzkdshfzsdhfkjsdhzlkfj
+					ksdjzfhlzkdshflkjszdhflkzjsdfh
+					sDJFhdskjfhklsdjhfkl
+				<a id="Aboutus">DJZfhdskfhkjdszf</a>
+					</p>
 				
 </td>
 				
@@ -56,12 +70,15 @@
        </table>
 		
     </main>
+		
 <script>
 </script>
-<footer class="footer">
-		<div><font size="0">&copy; <script>
+		
+<footer>	
+<div class="footers">
+		&copy; <script>
         document.write(new Date().getFullYear());
-          </script> Valerie Lok, s3707035</font></div>
+          </script> Valerie Lok, s3707035</div>
         </footer>
 
     

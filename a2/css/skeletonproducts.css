@@ -1,8 +1,10 @@
 /* Make HTML and body content viewable, layout to fill window */
-html,
+html{background-color: transparent;}
 body
  {  
-    
+    background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
+    background-attachment: fixed; 
+    background-size: cover;
      }
 
 html {
@@ -249,9 +251,13 @@ text-align: center;}
 		
 
 
-.footer {
-	margin-top: 450px;
-	float:left;}
+.footers  
+	 {float:left;
+      font-family: 'Slabo 27px', serif, sans-serif;
+ 	  font-size: 15px;
+	  position: fixed;
+	  bottom:0;
+}
 footer,
 
 

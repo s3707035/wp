@@ -2,7 +2,9 @@
 html,
 body
  {  
-    
+    background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
+    background-attachment: fixed; 
+    background-size: cover;
      }
 
 html {
@@ -25,7 +27,32 @@ button{
   border: none;
   background: transparent;
 }
-nav,
+nav{
+	position:absolute;
+	top:13px;
+	left:13px;
+}
+
+table, th, td{
+	margin-left: 220px;    
+	font-family: 'Slabo 27px', serif, sans-serif;
+    border-collapse: collapse;
+	padding-top: 40px;
+	padding-right: 40px;
+	padding-left: 40px;
+	
+}
+
+
+table{
+	position:absolute;
+	top: 200px;
+	table-layout: fixed;
+	width: 80%;
+	margin-left: 300px;
+	}
+    
+
 main{
   padding: 1px;
   }
@@ -54,6 +81,7 @@ div,
 
 header
  
+
 main
 { font-family: 'Slabo 27px', serif;
   font-size: 40px;
@@ -104,15 +132,66 @@ main
 	 
 }
 
-.maintable{
-    font-family: 'Slabo 27px', serif, sans-serif;
-    border-collapse: collapse;
-	width: 100%;}
-	
-.maintable td{ 
-    font-size: 20px;
+.aboutus{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
   }
+
+.aboutus:hover{
+	width: 120px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+
+.contactus{
+	color: #000000;
+	 font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 40px;
+  letter-spacing: .1em; 
+  }
+
+.contactus:hover{
+	width: 200px;
+	box-shadow: 6px 6px #3300CC
+	 
+}
+
+p.head{
+	position: absolute; 
+	top: -25px;
+ font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 120px;
+  letter-spacing: .1em; 
+	margin-left: 610px;
+}
 	
+
+p.welcome{font-family: 'Slabo 27px', serif, sans-serif;
+ 	  font-size: 35px;
+	letter-spacing: .1em;
+	text-align: center;
+	
+}
+
+p.history{
+	position: absolute; 
+	top: 400px;
+ font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 100px;
+  letter-spacing: .1em; 
+	margin-left: 280px;
+}
+
+p.historyaboutus{font-family: 'Slabo 27px', serif, sans-serif;
+ 	  font-size: 35px;
+	margin-top: 150px;
+	letter-spacing: .1em;
+	text-align: center;
+	
+}
 
 section {
   font-family: 'Love Ya Like A Sister', cursive;
@@ -124,9 +203,68 @@ section {
 
 nav,
 
-.footer  {float:left;}
+.footers  
+	 {float:left;
+      font-family: 'Slabo 27px', serif, sans-serif;
+ 	  font-size: 15px;
+	  position: fixed;
+	  bottom:0;
+}
 
-footer,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

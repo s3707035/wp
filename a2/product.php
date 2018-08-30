@@ -36,7 +36,7 @@
     <main>
         <table id="maintable">
 			<tr>
-			<td> <p class="body">Desklamp featuring 360degree full
+			<td> <p class="first">Desklamp</p><p class="body">          featuring 360degree full
 				articulation, solid adjustable stand, can be
 				amount on any surface at any angle.<br>
 				Brand new (max 13 watt light bulb)</p>
@@ -53,7 +53,7 @@
   </select>
 
 	<br>
-	<div class="quantity">
+	<div>
 		<p class="quanity">Quanity</p>
 		<div class="plusminusbutton">
       <button class="plusbutton" type="button" name="plusbutton">
@@ -93,11 +93,11 @@ function minusFunction() {
        </table>
 		
     </main>
-
-<footer class="footer">
-		<div><font size="0">&copy; <script>
+<footer>
+<div class="footers">
+		&copy; <script>
         document.write(new Date().getFullYear());
-          </script> Valerie Lok, s3707035</font></div>
+          </script> Valerie Lok, s3707035</div>
         </footer>
 
     

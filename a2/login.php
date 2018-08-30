@@ -19,16 +19,17 @@
 	  
 	
       
-      <div><section>LOGIN</section></div>
+	  <div><h2 class="title">LOGIN</h2></div>
       
 	  
       <main>
       <form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post' enctype='text/plain' onsubmit="return  formvalidateFunction()">
-    <div>
+    <div class="email">
       <label for="email"><b>Email</b></label>
         <input type="text" id="email" placeholder="Enter Email Address" name="email" value='' style=" height:30px;" required>
         <br></div>
-          <div>
+		  
+          <div class="password">
       <label for="Password"><b>Password</b></label>
       <input type="Password" placeholder="Enter Password" name="password" value='' style=" height:30px;" required><br>
           </div>
@@ -36,11 +37,10 @@
            <div> 
         <button type="submit" class="button"><img src="../../media/signin.png" alt="Submit" style="height:70px"/>
 			   </button>
-          </div>
+		
+		  </div></form>
 		  
-		  
-		  
- <script>
+        <script>
 function emailFunction() {
  var at = document.getElementById("email").value.indexOf("@");
 	if (at == -1) {
@@ -60,14 +60,15 @@ function formvalidateFunction(){
     }}
 		  </script>
 		  
-		  </form>
+		  
+		  
           </main>
 
     
     <footer>
-		<div class="footers"><font size="+0"> &copy; <script>
+		<div class="footers"> &copy; <script>
         document.write(new Date().getFullYear());
-          </script> Valerie Lok, s3707035</font></div>
+          </script> Valerie Lok, s3707035</div>
         </footer>
 
    

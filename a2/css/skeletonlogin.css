@@ -1,5 +1,5 @@
 /* Make HTML and body content viewable, layout to fill window */
-html,
+html{background-color: transparent;}
 body
  {  
     background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
@@ -15,6 +15,7 @@ html {
 }
 body {
   min-height:calc(100vh - 40px);
+	
 }
 
 
@@ -25,7 +26,8 @@ header{
 
 button{
   border: none;
-	background: transparent;}
+	background: transparent;
+   margin-top: 20px;}
 nav,
 main{
   padding: 1px;
@@ -34,9 +36,7 @@ main{
 footer,
 
 aside,
-section{ margin-top: 0px;
-    margin-bottom: 0px;
-  padding: 1px;}
+section,
 article,
 details,
 div,
@@ -54,6 +54,7 @@ div,
 /* Some basic styling for the starting page */
 
 header
+
  
 main
 { font-family: 'Love Ya Like A Sister', cursive;
@@ -67,7 +68,7 @@ main
 .button:hover {
     background-color: #D3D3D3;
 	border-radius: 50px;
-    
+	    
 }
 
 .overlay {
@@ -86,17 +87,30 @@ main
 .header:hover .overlay {
 	opacity: .3;}
 
-.footers
- {float:left;
-}
-
-section {
+.title {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 80px;
   letter-spacing: .1em; 
-    text-shadow: 3px 3px #3c3c3c;}
+    text-shadow: 3px 3px #D3D3D3;
+    margin-top: 0px;
+    margin-bottom: 10px;
+   padding: 1px;}
 
+.email{
+	margin-bottom: 12px;
+}
+.footers
+ {float:left;
+font-family: 'Slabo 27px', serif, sans-serif;
+ font-size: 15px;
+	 position: fixed;
+	 bottom:0;
+	   background-color:transparent;
+}
 
+footer {height: 100px;
+	  background-color:transparent;
+}
 
 
 
