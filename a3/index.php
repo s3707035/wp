@@ -22,10 +22,14 @@
 
   <body>
 	<div class="header"> <nav>
+
 		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
 	 	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
 		<div class="overlay"></div></a>
 		      
+		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/product.php" style="text-decoration:none">
+		<p class="product">PRODUCT</p></a>
+		
 		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
 		<p class="product">PRODUCTS</p></a>
 		

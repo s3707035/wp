@@ -1,0 +1,119 @@
+html{background-color: transparent;}
+body{
+	background-image:    
+	url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
+    background-attachment: fixed; 
+	background-size: cover;}
+     
+html{
+	min-height:100vh;}
+
+body{
+	min-height:calc(100vh - 40px);}
+	
+/* Give all semantic body elements uniform layout style */
+header{
+  margin-top: 10px;
+  padding: 5px;} 
+
+button{
+  border: none;
+  background: transparent;
+  margin-top: 20px;}
+
+nav,
+
+main{
+  padding: 1px;}
+
+footer,
+
+aside,
+
+section,
+
+article,
+
+details,
+
+div,
+
+/* Give each semantic body element a different color */
+header,
+
+nav,
+
+main,
+
+footer,
+
+article,
+
+aside,
+
+section,
+
+details,
+
+div,
+
+/* Some basic styling for the starting page */
+
+header
+
+main
+	{ font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 35px;
+    text-align: center;}
+
+.homebutton{
+	margin-right: 1400px;}   
+
+.button:hover {
+    background-color: #D3D3D3;
+	border-radius: 50px;}
+	    
+.overlay {
+  	position: absolute;
+  	border-radius: 200px;
+  	margin-top: 10px;
+  	margin-left: 580px;
+  	padding: 5px;top: 0;
+  	height: 43%;
+  	width: 21%;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: #D8D8D8;}
+
+.header:hover .overlay {
+	opacity: .3;}
+
+.title {
+  	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 80px;
+  	letter-spacing: .1em; 
+  	text-shadow: 3px 3px #D3D3D3;
+  	margin-top: 0px;
+  	margin-bottom: 10px;
+  	padding: 1px;}
+
+
+.error{ font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 20px;
+	
+}
+.footers{
+	float:left;
+	font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: fixed;
+	bottom:0;
+	background-color:transparent;}
+
+footer {height: 100px;
+	  background-color:transparent;}
+
+
+
+
+

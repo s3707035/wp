@@ -7,7 +7,32 @@
     <title>Products</title>
     
    <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/skeletonproducts.css"></head>
-    		 
+    
+	
+
+<?PHP
+	
+//$file = fopen("products.txt","r");
+
+//$array_products = []; 
+//while (($data = fgetcsv($file,100,"\t")) !== FALSE) {
+  //              $array_products[] = $data;}
+	
+//fclose($file);
+
+
+//echo "no: ".$array_products [1][0]." Colour ".$array_products [1][1]." Title: ".$array_products [1][2]." Description: ".$array_products [1][3]." Colour: ".$array_products [1][4]." Price: ".$array_products [1][5].".<br>";
+
+
+		//	<div class="overlayglamp"></div>
+		//	<p class="title"><?php echo $array_products [1][2] ?//</p>
+		//	<?php echo "<div id='body'"> $array_products [1][3] echo "</div>";
+		//php echo "<p id="price">" $$array_products [1][5] ?//</p>;
+		
+
+	?>
+
+
 	<body>
 	<div class="header"> <nav>
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
@@ -18,45 +43,19 @@
 	</nav></div>
 		  
 	<header><p class="head">Sale</p></header>
-
-    <main>
+<form action='processing.php' method='get'> 
+		<main>
         <table id="mainproductstable">
 		<tr>
 		<td>  
-			
+			<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/product.php">
 			<div class="overlayglamp"></div></a>
 			<p class="title">Lamp</p>
-			<p id="body"></p>
+			<p class="body">Desklamps barley used, two colours available green or white</p></td>
 				
-				
-				
-				
-	<script>
-	var txtFile = new XMLHttpRequest();
-txtFile.open("GET", "https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.txt", true);
-txtFile.onreadystatechange = function() {
-  if (txtFile.readyState === 4) { 
-	  var lines= txtFile.responseText;
-     hello(lines);
-		
-    }
-  }
-
-txtFile.send(null);
-	
-
-function hello (lines) {
-
-   var linerows = lines.split('\n');}
-		
-		document.getElementById("body").innerHTML = print(linerows[1]);
-</script>
-	  	  
-
-			</td>
-			
 			<td>
-            <div class="overlaycup"></div>
+			<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/tools.php" target="K133">
+            <div class="overlaycup"></div></a>
 			<p class="title">Coffee Cup</p>
 			<p class="body">Re-useable coffee cup, 350ml volume</p>
 			</td>	
@@ -89,7 +88,8 @@ function hello (lines) {
 			</tr>
 		    </table>
 		    </main>
-		
+	</form>
+
 
 	<footer>
       <div class="footers">&copy;<script>
