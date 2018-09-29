@@ -11,26 +11,22 @@
 	
 
 <?PHP
-	
-//$file = fopen("products.txt","r");
+session_start();
+$fp =fopen('product.txt', 'r');
+	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
+		while ($cells = fgetcsv($fp, 0, "\t") ) {
+			for ($x=1; $x<count($cells); $x++)
+				$product[$cells[0]][$headings[$x]]=$cells[$x];
+					   
+		}
+	}
+	fclose($fp);
+				echo "<pre>";
+   print_r($product);
+echo "</pre>";	   
+  
+	?>	
 
-//$array_products = []; 
-//while (($data = fgetcsv($file,100,"\t")) !== FALSE) {
-  //              $array_products[] = $data;}
-	
-//fclose($file);
-
-
-//echo "no: ".$array_products [1][0]." Colour ".$array_products [1][1]." Title: ".$array_products [1][2]." Description: ".$array_products [1][3]." Colour: ".$array_products [1][4]." Price: ".$array_products [1][5].".<br>";
-
-
-		//	<div class="overlayglamp"></div>
-		//	<p class="title"><?php echo $array_products [1][2] ?//</p>
-		//	<?php echo "<div id='body'"> $array_products [1][3] echo "</div>";
-		//php echo "<p id="price">" $$array_products [1][5] ?//</p>;
-		
-
-	?>
 
 
 	<body>

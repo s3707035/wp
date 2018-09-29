@@ -22,11 +22,16 @@
 <script>
 	function myCC() {
 	var a= "<img src='../../media/visa.png'>"
-
+	 
 	var card= /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+	
 	var x = document.getElementById("cc").value;
+	var i = 0, xLength = x.length;
+ 	for(i; i < xLength; i++) {
+    x = x.replace(" ", "");}
+	
 	if(card.test(x))
-		{document.getElementById("credit").innerHTML = a;}
+	{document.getElementById("credit").innerHTML = a;}
 
 	else{return true;}
 	}
@@ -95,10 +100,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["cc"])) {
     $ccErr = "Credit card number is required";
   } else {
-    $cc = test($_POST["cc"])
+    $cc = test($_POST["cc"]);
 	$nscc = preg_replace('/\s+/','',$cc);
-
-if (!preg_match("/^([0-9]{12,15})$/", $nscc)) 
+		
+	if (!preg_match("/^([0-9]{12,16})$/", $nscc)) 
 {$ccErr = "Please enter a valid credit card number";} 
 	    }
 
