@@ -7,7 +7,31 @@
     <title>Product</title>
     
    <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/product.css"></head>
-    
+   <?php
+	
+	session_start();
+$fp =fopen('product.txt', 'r');
+	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
+		while ($cells = fgetcsv($fp, 0, "\t") ) {
+			for ($x=1; $x<count($cells); $x++)
+				$product[$cells[0]][$headings[$x]]=$cells[$x];
+				
+			}
+	fclose($fp);
+	}
+	print_r($product);
+
+	
+	if (isset($_GET['id']) && $_GET['id'] = current($product))
+	{echo ("hello world");}
+
+else {
+header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+exit();}
+	
+		
+
+	?>
 	 
 	<body>
     <div class="header"> 

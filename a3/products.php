@@ -11,20 +11,7 @@
 	
 
 <?PHP
-session_start();
-$fp =fopen('product.txt', 'r');
-	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
-		while ($cells = fgetcsv($fp, 0, "\t") ) {
-			for ($x=1; $x<count($cells); $x++)
-				$product[$cells[0]][$headings[$x]]=$cells[$x];
-					   
-		}
-	}
-	fclose($fp);
-				echo "<pre>";
-   print_r($product);
-echo "</pre>";	   
-  
+
 	?>	
 
 
@@ -44,7 +31,7 @@ echo "</pre>";
         <table id="mainproductstable">
 		<tr>
 		<td>  
-			<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/product.php">
+			<a href="product.php?id='L123'">
 			<div class="overlayglamp"></div></a>
 			<p class="title">Lamp</p>
 			<p class="body">Desklamps barley used, two colours available green or white</p></td>
