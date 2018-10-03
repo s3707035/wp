@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+	<?php session_start(); ?>
   <head>
     <meta charset="utf-8">
     <meta name="Product" content="Product">
@@ -7,33 +8,7 @@
     <title>Product</title>
     
    <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/product.css"></head>
-   <?php
-	
-	session_start();
-$fp =fopen('product.txt', 'r');
-	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
-		while ($cells = fgetcsv($fp, 0, "\t") ) {
-			for ($x=1; $x<count($cells); $x++)
-				$product[$cells[0]][$headings[$x]]=$cells[$x];
-				
-			}
-	fclose($fp);
-	}
-	print_r($product);
-
-	
-	if (isset($_GET['id']) && $_GET['id'] = current($product))
-	{echo ("hello world");}
-
-else {
-header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
-exit();}
-	
-		
-
-	?>
-	 
-	<body>
+   <body>
     <div class="header"> 
 	<nav>
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
@@ -48,19 +23,42 @@ exit();}
     
 	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
     </nav></div>
+	
+<?php
+	 	   	   
+$fp =fopen('product.txt', 'r');
+	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
+		while ($cells = fgetcsv($fp, 0, "\t") ) {
+			for ($x=1; $x<count($cells); $x++)
+				$product[$cells[0]][$headings[$x]]=$cells[$x];
+				
+			}
+	fclose($fp);
+	}
+	   
+	   $item= $_GET['id'];
+	   $isvalid= array_key_exists($item,$product); 
 
-     
+if (!isset($_GET['id']) &&($isvalid!==true))
+{
+header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+exit();}
  
-    
+	   
+	   
+	else{}   
+	 
+         
+?>
+	   
+
+	
     <main>
     <table id="maintable">
 	<tr>
-	<td> <p class="first">Desklamp</p><p class="body">          
-		featuring 360degree full
-		articulation, solid adjustable stand, can be
-		amount on any surface at any angle.<br>
-		Brand new (max 13 watt light bulb)</p>
-		 <p class="price">$20.00</p>
+	<td> <p class="first"><?php echo $product[$item]['Title'] ?></p>
+		<p class="body"><?php echo $product[$item]['Description'] ?></p>
+		 <p class="price">$<?php echo $product[$item]['Price'] ?></p>
 
 		
 		<form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post'>
@@ -101,6 +99,10 @@ function minusFunction() {
 		</tr>
 		</table>
 		</main>
+	
+
+	
+	 
 		
 <footer>
 <div class="footers">
