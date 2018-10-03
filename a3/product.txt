@@ -1,10 +1,10 @@
-ID	OID	Title	Description	Option	Price
-L123	WHI	Desklamp	Brand new & solid adjustable stand	White	20.00
+ID	OID	Title	Description	Option	Price	Img
+L123	WHI	Desklamp	Brand new & solid adjustable stand	White	20.00	https://titan.csit.rmit.edu.au/~s3707035/media/greenlamp.JPG
 L123	GRN	Desklamp	Brand new & solid adjustable stand	Green	20.00
-K133	BLU	Coffee Cup	350ml can hold hot or cold beverages	Blue	8.00
+K133	BLU	Coffee Cup	350ml can hold hot or cold beverages	Blue	8.00	https://titan.csit.rmit.edu.au/~s3707035/media/cup.JPG
 K133	WHI	Coffee Cup	350ml can hold hot or cold beverages	White	8.00
-G107	N/A	Cos Plant	Two cos plants roughly 2 years old	N/A	4.00
-S201	8Mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	8M	50.00
+G107	N/A	Cos Plant	Two cos plants roughly 2 years old	N/A	4.00	https://titan.csit.rmit.edu.au/~s3707035/media/cos.JPG
+S201	8Mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	8M	50.00	https://titan.csit.rmit.edu.au/~s3707035/media/shoes1.JPG
 S201	9Mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	9M	50.00
-P028	BLK	Goldfish	Black Moor goldfish 7cm & 1 year old	Black	12.00
-P029	ORG	Goldfish	Fantail goldfish 4cm & 1 year old	Orange	10.00
+P028	BLK	Goldfish	Black Moor goldfish 7cm & 1 year old	Black	12.00	https://titan.csit.rmit.edu.au/~s3707035/media/bfish1.JPG
+P029	ORG	Goldfish	Fantail goldfish 4cm & 1 year old	Orange	10.00	https://titan.csit.rmit.edu.au/~s3707035/media/ofish1.JPG

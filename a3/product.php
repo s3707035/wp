@@ -46,7 +46,10 @@ exit();}
  
 	   
 	   
-	else{}   
+	else{
+		$image_csv=$product[$item]['Img'];
+		
+	}   
 	 
          
 ?>
@@ -81,7 +84,7 @@ exit();}
         <button class="plusbutton" type="button" name="plusbutton">
         <img src="../../media/uparrow.png" alt="" height=30px onclick="plusFunction()"/></button>	</div>
     
-        <button type="submit" class="buybutton"><img src="../../media/buynow.png" alt="Submit" style="height:60px"/></button>
+        <button type="submit" class="buybutton"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
 	
 <script>
 function plusFunction() {
@@ -95,7 +98,7 @@ function minusFunction() {
 </td>
 	
 		<td>
-        <div class="overlayglamp"></div></td>
+        <div class="overlayglamp"><img src="<?php echo $image_csv;?>"/></div></td>
 		</tr>
 		</table>
 		</main>
