@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang='en'>
-	<?php session_start(); ?>
+	<?php session_start(); 
+	
+	if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
+		$QTY =$_POST['qty'];
+		while ($QTY>1){
+		$fp =fopen('product.txt', 'r');
+	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
+		while ($cells = fgetcsv($fp, 0, "\t") ) {
+			for ($x=1; $x<count($cells); $x++)
+				$product[$cells[0]][$headings[$x]]=$cells[$x];
+	
+			}
+	fclose($fp);
+	}
+	   
+	   $item= $_POST['id'];
+	   $isvalid= array_key_exists($item,$product); 
+
+		}
+	
+  $_SESSION['cart'][$id]['oid'] = $oid;
+  $_SESSION['cart'][$id]['qty'] = $qty;
+	}
+	
+	else{
+		header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+exit();}
+	?>
+	
   <head>
     <meta charset="utf-8">
     <meta name="Product" content="Product">
       
-    <title>Product</title>
+    <title>cart</title>
     
-   <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/product.css"></head>
+   <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/cart.css"></head>
    <body>
     <div class="header"> 
 	<nav>
@@ -19,7 +47,7 @@
 	<p class="products">PRODUCTS</p></a>
 	
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/login.php" style="text-decoration:none">
-	<p class="login">CART</p></a>
+	<p class="login">CHECKOUT</p></a>
     
 	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
     </nav></div>
@@ -71,9 +99,9 @@ exit();}
 		
 		<form action='https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php' method='post'>
   
- 		<input type="hidden" id="product ID" name="id" value="<?php echo $item ?>"><br>
+ 		<input type="hidden" id="product ID" name="id" value="#98734"><br>
     
-  		<select name='oid' id="option" required>
+  		<select name='option' id="option" required>
   		<option selected='true' disabled>Select One</option>
   		<option value="<?php echo $product[$item]['Option'] ?>"><?php echo $product[$item]['Option'] ?></option>
   		<option value="<?php echo $product[$nextid]['Option'] ?>"><?php echo $product[$nextid]['Option'] ?></option></select><br>

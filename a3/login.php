@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
  </div> </header>
 	   <div><h2 class="title">CHECKOUT</h2></div>
-	  
+	  <body>
 <script>
 	function myCC() {
 	var a= "<img src='../../media/visa.png'>"
@@ -42,50 +42,51 @@
 
 $firstnameErr = $surnameErr = $emailErr = $addressErr = $phoneErr = $ccErr = $expErr= "";
 $firstname = $surname = $email = $address = $phone = $cc = $exp= "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$Cerror=0;
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	
   if (empty($_POST["firstname"])) {
     $firstnameErr = "first name is required";
-  } else {
+    $Cerror++; }
+	else {
     $firstname = test($_POST["firstname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$firstname)) {
       $firstnameErr = "Only letters and white space allowed"; 
-    }
+    $Cerror++;}
   }
   if (empty($_POST["surname"])) {
     $surnameErr = "surname is required";
-  } else {
+  $Cerror++;} else {
     $surname = test($_POST["surname"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
       $surnameErr = "Only letters and white space allowed"; 
-    }
+    $Cerror++;}
   }
   
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
-  } else {
+  $Cerror++;} else {
     $email = test($_POST["email"]);
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format"; 
-    }
+    $Cerror++;}
   }
    
   if (empty($_POST["address"])) {
     $addressErr = "Address is required";
-  } else {
+  $Cerror++;} else {
     $address = test($_POST["address"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$address)) {
       $addressErr = "Only letters and white space allowed"; 
-    }
+    $Cerror++;}
   }
 	  
 	if (empty($_POST["phone"])) {
     $phoneErr = "Phone number is required";
-  } else {
+  $Cerror++;} else {
     $phone = test($_POST["phone"]);
 	
   if (preg_match("/^([+614]{4})([0-9]{8})$/",$phone) || preg_match("/^([(04)]{4})([0-9]{8})$/",$phone) ||
@@ -93,43 +94,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   {}
 		else{
      $phoneErr = "Please enter a valid 8 digit number starting with +614 or 04";} 
-	    }
+	    $Cerror++;}
   
 	
   
 	if (empty($_POST["cc"])) {
     $ccErr = "Credit card number is required";
-  } else {
+  $Cerror++;} else {
     $cc = test($_POST["cc"]);
 	$nscc = preg_replace('/\s+/','',$cc);
 		
 	if (!preg_match("/^([0-9]{12,16})$/", $nscc)) 
-{$ccErr = "Please enter a valid credit card number";} 
+{$ccErr = "Please enter a valid credit card number";
+$Cerror++;} 
 	    }
 
 
   	if (empty($_POST["exp"])) {
     $expErr = "Credit card expiry date is required";
-  } else {
- 	$newDate = strtotime("now");
-	$ncd = date("Y-m",strtotime("+2 month",$newDate));
+  $Cerror++;} 
+ 	else{$newDate = strtotime("now");
+	$ncd = date("Y-m-d",strtotime("+28 days",$newDate));
 
 	$expDate = ($_POST["exp"]);
+	$expDatefirst=($expDate."-01");
+	$expDatefirstdone= str_replace('-', '', $expDatefirst);
+	$newncd= str_replace('-', '', $ncd);
 
-if ($expDate < $ncd) {
-    $expErr = "credit card can not expiry date must be a month or longer";
-
-} else {}
-	}
-	  
-	  }
-
+if ($expDatefirstdone < $newncd) {
+    $expErr = "credit card expiry date must be 28 days or longer";
+$Cerror++;
+} else {}}
+	
+}
+		  
+		 
 function test($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
+
+if(($Cerror<=1) && $_SERVER["REQUEST_METHOD"] == "POST")
+{
+	header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+exit();
+}
+
 
 ?>
 
@@ -174,11 +186,14 @@ function test($data) {
 
 	
 </main>
-
+	
 <footer>
-		<div class="footers"> &copy; <script>
+      <div class="footers">&copy;<script>
         document.write(new Date().getFullYear());
-        </script> Valerie Lok, s3707035</div></footer>
-
+      </script> Valerie Lok, s3707035 <br>
+		  <a href='product.txt'>products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
+    </footer>
    
-    
+       </body>
+    </html>
+   

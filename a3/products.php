@@ -81,7 +81,7 @@
 	<footer>
       <div class="footers">&copy;<script>
         document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='products.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
+      </script> Valerie Lok, s3707035 <br><a href='product.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
     </footer>
    
      </body>
