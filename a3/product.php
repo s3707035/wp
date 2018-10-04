@@ -48,6 +48,7 @@ exit();}
 	   
 	else{
 		$image_csv=$product[$item]['Img'];
+		$priceforsub=$product[$item]['Price'];
 		
 	}   
 	 
@@ -82,17 +83,32 @@ exit();}
      	<input type="number" id="numberid" placeholder="0" name="qty" value=' ' min="1" max="1000"  required> 
 
         <button class="plusbutton" type="button" name="plusbutton">
-        <img src="../../media/uparrow.png" alt="" height=30px onclick="plusFunction()"/></button>	</div>
+        <img src="../../media/uparrow.png" alt="" height=30px onclick="plusFunction()"/></button></div><a id="subtotal"></a>
     
         <button type="submit" class="buybutton"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
 	
 <script>
 function plusFunction() {
-    document.getElementById("numberid").stepUp(1);}
+    document.getElementById("numberid").stepUp(1);
+    var y= document.getElementById("numberid");
+	var z= y.value;
+	var p= '<?php echo $priceforsub ;?>';
+	var total= z*p;
+     total =total.toFixed(2);
+	document.getElementById("subtotal").innerHTML= "$" + total;}
+
 
 function minusFunction() {
-    document.getElementById("numberid").stepDown(1);}
+    document.getElementById("numberid").stepDown(1);
+    var y= document.getElementById("numberid");
+	var z= y.value;
+	var p= '<?php echo $priceforsub ;?>';
+	var total= (z*p);
+	total =total.toFixed(2);
+	document.getElementById("subtotal").innerHTML= "$" + total;}
 	
+
+	  
 </script>
 </form>
 </td>

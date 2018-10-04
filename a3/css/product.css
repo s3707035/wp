@@ -199,7 +199,11 @@ input{
    	font-size: 30px;
 	font-weight: bold;
 	text-align: center;}
-
+.subtotal{
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 20px;
+	
+}
 .buybutton{
 	margin-top: 50px;
     margin-left: 35px;}
