@@ -145,13 +145,13 @@ p.price{
 
 p.first{
 	font-family: 'Love Ya Like A Sister', cursive;
-	font-size: 40px;
-	position:absolute;
+	font-size: 35px;
+
 	top: 24px;}
 
 p.body {
 	margin-top: 0px;
-	font-size: 32px;
+	font-size: 25px;
 	text-align: left;
 	text-indent: 5%}
 

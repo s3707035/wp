@@ -2,10 +2,14 @@
 <html lang='en'>
 	<?php session_start(); 
 	
-	if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
+if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
+		$ADD =$_POST['add'];
+		$id =$_POST['id'];
 		$QTY =$_POST['qty'];
-		while ($QTY>1){
-		$fp =fopen('product.txt', 'r');
+		$OID =$_POST['oid'];
+		
+	
+	$fp =fopen('product.txt', 'r');
 	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
 		while ($cells = fgetcsv($fp, 0, "\t") ) {
 			for ($x=1; $x<count($cells); $x++)
@@ -14,19 +18,31 @@
 			}
 	fclose($fp);
 	}
-	   
-	   $item= $_POST['id'];
-	   $isvalid= array_key_exists($item,$product); 
+$isvalid= array_key_exists($id,$product); 
+	$keys = array_keys($product);
+	$nextid= $keys[array_search($id,$keys)+1];
+	$nextOID=$product[$nextid]['OID'];
+	$currentOID=$product[$id]['OID'];
+	print_r($nextOID);
+	print_r($currentOID);
 
-		}
+	if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
+	{$priceforsub = $product[$id]['Price'];
+ 		$price = $priceforsub*$QTY;
+  	
+	   
+		
 	
-  $_SESSION['cart'][$id]['oid'] = $oid;
-  $_SESSION['cart'][$id]['qty'] = $qty;
-	}
+  $_SESSION['cart'][$id]['oid'] = $OID;
+  $_SESSION['cart'][$id]['qty'] = $QTY;
 	
-	else{
-		header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
-exit();}
+
+		
+		}}
+		$image_csv=$product[$id]['Img'];
+/*	else{print_r("NOT WORK else statemet");
+	header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+exit()}*/
 	?>
 	
   <head>
@@ -52,72 +68,17 @@ exit();}
 	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
     </nav></div>
 	
-<?php
-	 	   	   
-$fp =fopen('product.txt', 'r');
-	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
-		while ($cells = fgetcsv($fp, 0, "\t") ) {
-			for ($x=1; $x<count($cells); $x++)
-				$product[$cells[0]][$headings[$x]]=$cells[$x];
-				
-			}
-	fclose($fp);
-	}
-	   
-	   $item= $_GET['id'];
-	   $isvalid= array_key_exists($item,$product); 
-
-if (!isset($_GET['id']) &&($isvalid!==true))
-{
-header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
-exit();}
- 
-	   
-	   
-	else{
-		$image_csv=$product[$item]['Img'];
-		$priceforsub=$product[$item]['Price'];
-	    $search = $item;
-    $keys = array_keys($product);
-    $nextid= $keys[array_search($search,$keys)+1];
-	
-		
-	}   
-	 
-         
-?>
-	   
-
-	
+   
     <main>
     <table id="maintable">
 	<tr>
-	<td> <p class="first"><?php echo $product[$item]['Title'] ?></p>
-		<p class="body"><?php echo $product[$item]['Description'] ?></p>
-		 <p class="price">$<?php echo $product[$item]['Price'] ?></p>
-
+	<td> <p class="first"><?php echo $product[$id]['Title'] ?></p>
+		 <p class="price"><?php echo $OID."<br>";?>QTY:   <?php echo $QTY. "&nbsp; &nbsp; &nbsp;". '$'.$price ?></p>
+<div class="overlayglamp"><img src="<?php echo $image_csv;?>"/></div>
 		
 		<form action='https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php' method='post'>
   
- 		<input type="hidden" id="product ID" name="id" value="#98734"><br>
-    
-  		<select name='option' id="option" required>
-  		<option selected='true' disabled>Select One</option>
-  		<option value="<?php echo $product[$item]['Option'] ?>"><?php echo $product[$item]['Option'] ?></option>
-  		<option value="<?php echo $product[$nextid]['Option'] ?>"><?php echo $product[$nextid]['Option'] ?></option></select><br>
-
-		
-		<p class="quanity">Quanity</p>
-		<div class="plusminusbutton">
-		<button class="minusbutton" type="button" name="minusbutton">
-        <img src="../../media/downarrow.png" alt="" height=30px onclick="minusFunction()"/></button>
-			
-     	<input type="number" id="numberid" placeholder="0" name="qty" value=' ' min="1" max="1000"  required> 
-
-        <button class="plusbutton" type="button" name="plusbutton">
-        <img src="../../media/uparrow.png" alt="" height=30px onclick="plusFunction()"/></button></div><a id="subtotal"></a>
-    
-        <button type="submit" class="buybutton"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
+         <button type="submit" class="buybutton"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
 	
 <script>
 function plusFunction() {
@@ -143,10 +104,8 @@ function minusFunction() {
 	  
 </script>
 </form>
-</td>
-	
-		<td>
-        <div class="overlayglamp"><img src="<?php echo $image_csv;?>"/></div></td>
+
+        
 		</tr>
 		</table>
 		</main>

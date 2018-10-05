@@ -69,8 +69,9 @@ exit();}
 		 <p class="price">$<?php echo $product[$item]['Price'] ?></p>
 
 		
-		<form action='https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php' method='post'>
-  
+		<form action='https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php' method='post'> 
+  	
+		<!---<form action='https://titan.csit.rmit.edu.au/~e54061/wp/processing.php' method='post'>---->
  		<input type="hidden" id="product ID" name="id" value="<?php echo $item ?>"><br>
     
   		<select name='oid' id="option" required>
@@ -89,7 +90,7 @@ exit();}
         <button class="plusbutton" type="button" name="plusbutton">
         <img src="../../media/uparrow.png" alt="" height=30px onclick="plusFunction()"/></button></div><a id="subtotal"></a>
     
-        <button type="submit" class="buybutton"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
+        <button type="submit" class="buybutton" name="add"  value="1"><img src="../../media/cart.png" alt="Submit" style="height:80px"/></button>
 	
 <script>
 function plusFunction() {
