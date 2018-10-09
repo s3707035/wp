@@ -10,9 +10,7 @@
     
 	
 
-<?PHP
 
-	?>	
 
 
 
@@ -21,6 +19,13 @@
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
 	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
 	<div class="overlay"></div></a>
+	
+	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
+	<p class="login">CART</p></a>
+		
+		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php" style="text-decoration:none">
+	<p class="products">CHECKOUT</p></a>
+	
 		
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
 	</nav></div>

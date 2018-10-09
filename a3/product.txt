@@ -5,8 +5,8 @@ K133	Blue	Coffee Cup	350ml can hold hot or cold beverages	Blue	8.00	https://tita
 K133A	White	Coffee Cup	350ml can hold hot or cold beverages	White	8.00
 G107	Small	Cos Plant	Two cos plants roughly 2 years old	Small	4.00	https://titan.csit.rmit.edu.au/~s3707035/media/cos.JPG
 G107A	Large	Cos Plant	Two cos plants roughly 2 years old	Large	4.00
-S201	8mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	8Mens	50.00	https://titan.csit.rmit.edu.au/~s3707035/media/shoes1.JPG
-S201A	9mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	9Mens	50.00
+S201	8Mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	8Mens	50.00	https://titan.csit.rmit.edu.au/~s3707035/media/shoes1.JPG
+S201A	9Mens	Climbing Shoes	Scarpa "chimera" lace-up 2010 model	9Mens	50.00
 P028	Small	Goldfish	Black Moor goldfish 1 year old very friendly	Small	12.00	https://titan.csit.rmit.edu.au/~s3707035/media/bfish1.JPG
 P028A	Large	Goldfish	Black Moor goldfish 1 year old very friendly	Large	12.00
 P029	Small	Goldfish	Fantail goldfish 3 years old very shy	Small	10.00	https://titan.csit.rmit.edu.au/~s3707035/media/ofish1.JPG

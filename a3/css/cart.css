@@ -2,26 +2,45 @@ html{background-color: transparent;}
 body{  
     background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
     background-attachment: fixed; 
-    background-size: cover;}
+    background-size: cover;
+	}
 
 html{
   min-height:100vh;}
 
 body {
-  min-height:calc(100vh - 40px);}
+  min-height:calc(100vh - 40px);
+}
+
+.footers {
+	float:left;
+    font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: sticky;
+    margin-top: 200px;}
+
+.title {
+  	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 80px;
+  	letter-spacing: .1em; 
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+	margin-left: 650px;
+  	padding: 1px;}
 
 header,
-.head{
+.header{
   position: absolute; 
   top: 0;
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 120px;
   letter-spacing: .1em; 
-  margin-left: 310px;}
+  margin-left: 0px;}
 
 nav{
   margin-top: 0px;
-  padding: 5px;} 
+  padding: 5px;
+margin-left: 0px;} 
 
 button{
   border: none;
@@ -31,9 +50,6 @@ header,
 
 main{
   padding: 1px;}
-
-footer,
-
 aside,
 
 section{ 
@@ -45,7 +61,11 @@ article,
 
 details,
 
-div,
+
+div { font-family: 'Slabo 27px';
+		font-size: 100px;}
+
+
 
 /* Give each semantic body element a different color */
 
@@ -95,7 +115,7 @@ main{
     letter-spacing: .1em;}
 
 .login:hover{
-	width: 120px;
+	width: 200px;
 	box-shadow: 6px 6px #3300CC}
 
 .overlay {
@@ -113,111 +133,31 @@ main{
 .header:hover .overlay {
 	opacity: .3;}
 
-section {
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-weight: bold;
-  font-size: 80px;
-  letter-spacing: .2em; 
-  text-shadow: 3px 3px #3c3c3c;}
-
-table, th, td{
-	margin-left: 220px;    
-	font-family: 'Slabo 27px', serif, sans-serif;
-    border-collapse: collapse;
-	padding-top: 40px;
-	padding-right: 40px;
-	padding-left: 40px;}
-
-table{
-	position:absolute;
-	top: 150px;
-	table-layout: fixed;
-	width: 80%;
-	margin-left: 300px;}
-    
-p.price{
-	position: absolute; 
-	margin-bottom: 0px;
-	margin-top: 0px;
-	margin-left: 400px;
-	font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 50px;}
-
-p.first{
-	font-family: 'Love Ya Like A Sister', cursive;
-	font-size: 35px;
-
-	top: 24px;}
-
-p.body {
-	margin-top: 0px;
-	font-size: 25px;
-	text-align: left;
-	text-indent: 5%}
-
-.overlayglamp{
-	width: 320px;
-	height: 620px;
-	padding-top: 0px;
-	padding-right: 40px;
-	padding-left: 40px;
-	}
-
-select {
-	margin-top: 0px;
-	border-color: #696969;
-	border-radius: 25px;
-	width: 250px;
-    font-family: 'Slabo 27px', serif, sans-serif;
-    font-size: 30px;
-	font-weight: bold;}
-
-.buybutton:hover{
-    background-color: #696969;
-	border-radius: 50px;}
-
-p.quanity {
-	font-family: 'Slabo 27px', serif, sans-serif;
-   	font-size: 50px;
-	font-weight: bold;
-	margin-bottom: 0px;
-	margin-left: 8px;}
-
-.minusbutton:hover {
-	background-color: #D0D0D0;
-	border-radius: 30px;}
-
-.plusbutton:hover {
-	background-color: #D0D0D0;
-	border-radius: 30px;}
-
-input{ 
-	border-color: #696969;
-	border-radius: 15px;
-	width: 80px;
-   	font-family: 'Slabo 27px', serif, sans-serif;
-   	font-size: 30px;
-	font-weight: bold;
-	text-align: center;}
-.subtotal{
-	font-family: 'Love Ya Like A Sister', cursive;
-  	font-size: 20px;
-	
-}
-.buybutton{
-	margin-top: 50px;
-    margin-left: 35px;}
-
 header,
 
-.footers {
-	float:left;
-    font-family: 'Slabo 27px', serif, sans-serif;
- 	font-size: 15px;
-	position: fixed;
-	bottom:0;}
 
-footer,
+
+table{
+	top: 100px;
+	margin-left: 300px;
+	margin-top: 10px;
+	table-layout: auto;
+    width: 70%; 
+	border: 1px solid black;
+	padding: 10px; 
+ }
+
+.button:hover {
+    background-color: #D3D3D3;
+}
+.cancel{
+	margin-top: -100px;
+	text-align: right;
+}
+.checkout{
+		margin-left: 700px;}
+
+
 
 
 

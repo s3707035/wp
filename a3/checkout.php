@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	else {
     $firstname = test($_POST["firstname"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$firstname)) {
+    if (!preg_match("/^[a-zA-Z .,'-]*$/",$firstname)) {
       $firstnameErr = "Only letters and white space allowed"; 
     $Cerror++;}
   }
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $Cerror++;} else {
     $surname = test($_POST["surname"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$surname)) {
+    if (!preg_match("/^[a-zA-Z .,'-]*$/",$surname)) {
       $surnameErr = "Only letters and white space allowed"; 
     $Cerror++;}
   }
@@ -79,10 +79,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $Cerror++;} else {
     $address = test($_POST["address"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$address)) {
-      $addressErr = "Only letters and white space allowed"; 
-    $Cerror++;}
-  }
+    if (!preg_match("~^[-a-zA-Z0-9\s,\-\/.']*$~",$address)) {
+      $addressErr = "invalid entry"; 
+    $Cerror++;}}
 	  
 	if (empty($_POST["phone"])) {
     $phoneErr = "Phone number is required";
@@ -137,7 +136,7 @@ function test($data) {
 }
 
 if(($Cerror<=1) && $_SERVER["REQUEST_METHOD"] == "POST")
-{
+{  
 	header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
 exit();
 }
@@ -180,7 +179,7 @@ exit();
 		 <label for="exp"><b>Exp. Date</b></label>
 		 <input type="month" min="2018-09" max="2025-01" id="exp" value="<?php echo $exp;?>" name="exp" style=" height:30px;" required><span class="error"> <?php echo $expErr;?></span><br></div> 
 			 
-        <div><button type="submit" value="submit" class="button"><img src="../../media/signin.png" alt="Submit" style="height:70px"/></button></div></form>
+        <div><button type="submit" value="submit" class="button"><img src="../../media/buynow.png" alt="Submit" style="height:70px"/></button></div></form>
 		  
 
 
