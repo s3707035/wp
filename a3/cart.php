@@ -1,4 +1,6 @@
+	
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang='en'>
 	  <head>
     <meta charset="utf-8">
@@ -29,15 +31,15 @@
 		
 		<button type="submit" class="button" name="cancel" value=""><img src="../../media/cancel.png" alt="Submit" style="height:60px"/></button></form></div>
 	
-	<?php session_start(); 
-	  	
-if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
-		$ADD =$_POST['add'];
-		$id =$_POST['id'];
-		$QTY =$_POST['qty'];
-		$OID =$_POST['oid'];
-		
+<?php
 	
+
+
+ if (isset($_POST['cancel'])) {
+  unset($_SESSION['cart']);
+  header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php");
+			 exit();}
+	   
 	$fp =fopen('product.txt', 'r');
 	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
 		while ($cells = fgetcsv($fp, 0, "\t") ) {
@@ -47,24 +49,17 @@ if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
 			}
 	fclose($fp);
 	}
-$isvalid= array_key_exists($id,$product); 
-	$keys = array_keys($product);
-	$nextid= $keys[array_search($id,$keys)+1];
-	$nextOID=$product[$nextid]['OID'];
-	$currentOID=$product[$id]['OID'];
-	
-if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
-	{$priceforsub = $product[$id]['Price'];
- 		$price = $priceforsub*$QTY;
-  $_SESSION['cart'][$id]['oid'] = $OID;
-  $_SESSION['cart'][$id]['qty'] = $QTY;
-			
-		}
- $CART=$_SESSION['cart'];
-	$arraykey= array_keys($CART);
+if(empty($_SESSION['cart'])){ 
+		   echo "<div><h2 class='empty'>CART IS EMPTY</h2></div>";
+	   }
+	   
+
+	   
+else{
+	$CART= $_SESSION['cart'];
+    $arraykey= array_keys($CART);
 	$grandtotal=0;
-	
-	
+   
 	foreach($arraykey as $item)
 {	 $image_csv=$product[$item]['Img'];
 	$itemprice=$product[$item]['Price'];
@@ -72,36 +67,28 @@ if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
  	$itemtotal1=$itemprice*$itemqty;
  	$itemtotal=number_format($itemtotal1,2);	
     $grandtotal+= $itemtotal1;
- 	echo "<table><div>";
+ 	echo "<table class='test'><div>";
  
- echo "<tr><td></td><td>{$product[$item]['Title']}</td>
+ echo "<tr><td></td><td class='productss'>{$product[$item]['Title']}</td>
    <td>Quanity: {$_SESSION['cart'][$item]['qty']}</td></tr>";
  	echo "<tr><td> <img src='$image_csv'/> </td><td> {$product[$item]['Description']}</td></tr>";
  	echo "<tr><td></td><td>Type: {$_SESSION['cart'][$item]['oid']}</td>
-<td> Price: $ {$itemtotal}</td>" ;   
+<td class='price'> Price: $ {$itemtotal}</td>" ;   
   echo "</table></div>";
  }
 $grandtotal= number_format($grandtotal,2);
 $finaltotal= 'Final Total: $';
-echo "<div style='margin-left: 1000px;'>";
-echo $finaltotal.$grandtotal;
-echo "</div>";
-}
-	     
- if (isset($_POST['cancel'])) {
-  unset($_SESSION['cart']);
-  header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php");
-			 exit();}?>
+echo "<div class='exptest'>$finaltotal$grandtotal</div>";
+
+
+
+
+?>	   
 	   
 
 <div class="checkout">
 	<button id="checkout" class="button" name="checkout" value=""><img src="../../media/checkout.png" alt="Submit" style="height:100px"/></button></div>
-
-<? php}  
-	
-else{
-	header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
-exit();} ?>
+ <?php } ?>
    
 	 </body>
 <footer>

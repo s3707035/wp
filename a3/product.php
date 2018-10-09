@@ -21,7 +21,7 @@
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
 	<p class="login">CART</p></a>
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php" style="text-decoration:none">
-	<p class="login">CHECKOUT</p></a>
+	<p class="products">CHECKOUT</p></a>
     
 	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
     </nav></div>
@@ -38,9 +38,31 @@
 	fclose($fp);
 	}
 	   
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
+		$ADD =$_POST['add'];
+	$id =$_POST['id'];
+	$QTY =$_POST['qty'];
+	$OID =$_POST['oid'];}
+	
+	$isvalid= array_key_exists($id,$product); 
+	$keys = array_keys($product);
+	$nextid= $keys[array_search($id,$keys)+1];
+	$nextOID=$product[$nextid]['OID'];
+	$currentOID=$product[$id]['OID'];
+	
+if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
+	{$priceforsub = $product[$id]['Price'];
+ 		$price = $priceforsub*$QTY;
+  $_SESSION['cart'][$id]['oid'] = $OID;
+  $_SESSION['cart'][$id]['qty'] = $QTY;
+			
+		}
+	
+header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php");
+	exit();}   
 
-
-	   $item= $_GET['id'];
+	 $item= $_GET['id'];
 	   $isvalid= array_key_exists($item,$product); 
 
 if (!isset($_GET['id']) &&($isvalid!==true))
@@ -73,10 +95,9 @@ exit();}
 		 <p class="price">$<?php echo $product[$item]['Price'] ?></p>
 
 		
-	 
+	   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   	
-		<form action='https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php' method='post'>
-			
+					
  		<input type="hidden" id="product ID" name="id" value="<?php echo $item ?>"><br>
     
   		<select name='oid' id="option" required>

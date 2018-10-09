@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang='en'>
   <head>
     <meta charset="utf-8">
@@ -50,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $Cerror++; }
 	else {
     $firstname = test($_POST["firstname"]);
-    // check if name only contains letters and whitespace
+    
     if (!preg_match("/^[a-zA-Z .,'-]*$/",$firstname)) {
       $firstnameErr = "Only letters and white space allowed"; 
     $Cerror++;}
@@ -59,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $surnameErr = "surname is required";
   $Cerror++;} else {
     $surname = test($_POST["surname"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z .,'-]*$/",$surname)) {
+    
+	  if (!preg_match("/^[a-zA-Z .,'-]*$/",$surname)) {
       $surnameErr = "Only letters and white space allowed"; 
     $Cerror++;}
   }
@@ -78,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $addressErr = "Address is required";
   $Cerror++;} else {
     $address = test($_POST["address"]);
-    // check if name only contains letters and whitespace
+    
     if (!preg_match("~^[-a-zA-Z0-9\s,\-\/.']*$~",$address)) {
       $addressErr = "invalid entry"; 
     $Cerror++;}}
@@ -137,7 +138,19 @@ function test($data) {
 
 if(($Cerror<=1) && $_SERVER["REQUEST_METHOD"] == "POST")
 {  
-	header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
+	$fname=$_POST["firstname"];
+	$sname=$_POST["surname"];
+	$emails=$_POST["email"];
+	$addy=$_POST["address"];
+	$phones=$_POST["phone"];
+$_SESSION['buyer']['firstname'] = $fname;
+$_SESSION['buyer']['surname'] = $sname;
+$_SESSION['buyer']['email'] = $emails;
+$_SESSION['buyer']['address'] = $addy;
+$_SESSION['buyer']['phone'] = $phones;
+
+	
+header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/receipt.php"); 
 exit();
 }
 

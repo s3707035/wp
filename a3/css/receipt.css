@@ -1,0 +1,136 @@
+html{background-color: transparent;}
+body{  
+    background-image: url(https://titan.csit.rmit.edu.au/~s3707035/media/logo.png); 
+    background-attachment: fixed; 
+    background-size: cover;
+	width: 21cm;
+  height: 29.7cm;
+	}
+         
+.header{
+  position: absolute; 
+  top: 12px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 120px;
+  letter-spacing: .1em; 
+  margin-left: 2px;}
+
+.footers {
+	float:left;
+    font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: absolute;
+	bottom: -300px;
+    }
+
+    .invoice {
+        border:1px solid #696969;
+        padding:10px;
+        height:700pt;
+        width:570pt;
+        }
+  
+         
+     .invoice-details {
+            border:1px solid #A9A9A9;
+            float:right;
+            width:180px;
+		 text-align: center;
+		 padding-right: 0px;
+        }
+
+  .company-address {
+	  padding-left: 7px;
+     bottom: -230px;
+position:absolute;
+	  font-size: 12px;
+                    } 
+
+     .customer-address {
+		  font-size: 20px;
+		 padding: 5px;
+            border:1px solid #A9A9A9;
+            float:left;
+            margin-bottom:50px;
+            margin-top:200px;
+            width:200pt;
+		
+        }
+         
+     .clear-fix {
+            clear:both;
+            float:none;
+
+        }
+main{ 
+	font-family: 'Slabo 27px', serif;
+  	font-size: 20px;}
+
+
+         
+        table {
+            width:100%;
+        border: 1; 
+	} 
+
+        th {
+            text-align: left;
+        }
+         
+        td {
+        }
+         
+        .text-left {
+            text-align:left;
+        }
+         
+        .text-center {
+            text-align:center;
+        }
+         
+        .text-right {
+            text-align: right;
+        }
+
+.tots{
+	margin-left: 610px;
+	font-weight: bold;
+}
+
+.bottom-text{
+	text-align: right}
+}
+
+
+
+
+
+
+
+
+
+
+/* Give each semantic body element a different color */
+
+header,
+
+nav,
+
+main,
+
+footer,
+
+article,
+
+aside,
+
+section,
+
+details,
+
+div,
+
+/* Some basic styling for the starting page */
+
+ 
+

@@ -12,6 +12,17 @@ body {
   min-height:calc(100vh - 40px);
 }
 
+.test{
+	font-family: 'Slabo 27px', serif, sans-serif;
+	font-size: 30px;
+}
+.exptest{
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 40px;
+	margin-left: 1000px;
+}
+
+
 .footers {
 	float:left;
     font-family: 'Slabo 27px', serif, sans-serif;
@@ -27,6 +38,8 @@ body {
   	margin-bottom: 20px;
 	margin-left: 650px;
   	padding: 1px;}
+
+
 
 header,
 .header{
@@ -65,7 +78,18 @@ details,
 div { font-family: 'Slabo 27px';
 		font-size: 100px;}
 
+.empty{ font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 60px;
+  	letter-spacing: .1em; 
+  	margin-top: 100px;
+	margin-bottom: 20px;
+margin-left: 550px}
 
+.price{
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 30px;
+  	
+}
 
 /* Give each semantic body element a different color */
 
@@ -97,6 +121,11 @@ main{
 
 .homebutton{
 	margin-right: 1400px;}   
+.productss{
+	color: #000000;
+	font-family: 'Love Ya Like A Sister', cursive;
+  	font-size: 40px;
+  	letter-spacing: .1em;}
 
 .products{
 	color: #000000;
@@ -124,8 +153,8 @@ main{
   margin-top: 7px;
   margin-left: 0px;
   padding: 0px;top: 0;
-  height: 30%;
-  width: 13%;
+  height: 45%;
+  width: 98%;
   opacity: 0;
   transition: .5s ease;
   background-color: #D8D8D8;}
