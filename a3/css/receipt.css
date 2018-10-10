@@ -15,6 +15,17 @@ body{
   letter-spacing: .1em; 
   margin-left: 2px;}
 
+  .company-address {
+	      
+	  margin-top: 200px;
+	  padding: 7px;
+float: left;
+	  margin-left: 25px;
+position:static; 
+	  font-size: 12px;
+	  text-align: center
+                    } 
+
 .footers {
 	float:left;
     font-family: 'Slabo 27px', serif, sans-serif;
@@ -39,25 +50,23 @@ body{
 		 padding-right: 0px;
         }
 
-  .company-address {
-	  padding-left: 7px;
-     bottom: -230px;
-position:absolute;
-	  font-size: 12px;
-                    } 
+
 
      .customer-address {
+		 position: static;
 		  font-size: 20px;
 		 padding: 5px;
             border:1px solid #A9A9A9;
-            float:left;
+            float:right;
+		margin-left: 400px;
             margin-bottom:50px;
-            margin-top:200px;
+            margin-top: -150px;
             width:200pt;
 		
         }
          
      .clear-fix {
+		 margin-top: 320px;
             clear:both;
             float:none;
 
@@ -90,11 +99,19 @@ main{
          
         .text-right {
             text-align: right;
+			padding-right: 10px;
         }
+.text-righty{
+	text-align: right;
+	padding-right:  25px;
+
+		
+}
 
 .tots{
-	margin-left: 610px;
+	margin-left: 580px;
 	font-weight: bold;
+	font-size: 23px;
 }
 
 .bottom-text{

@@ -137,17 +137,18 @@ function test($data) {
 }
 
 if(($Cerror<=1) && $_SERVER["REQUEST_METHOD"] == "POST")
-{  
+{   $date=date("d-m-Y");
 	$fname=$_POST["firstname"];
 	$sname=$_POST["surname"];
 	$emails=$_POST["email"];
-	$addy=$_POST["address"];
 	$phones=$_POST["phone"];
+	$addy=$_POST["address"];
+$_SESSION['buyer']['date'] = $date;
 $_SESSION['buyer']['firstname'] = $fname;
 $_SESSION['buyer']['surname'] = $sname;
 $_SESSION['buyer']['email'] = $emails;
-$_SESSION['buyer']['address'] = $addy;
 $_SESSION['buyer']['phone'] = $phones;
+$_SESSION['buyer']['address'] = $addy;
 
 	
 header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/receipt.php"); 

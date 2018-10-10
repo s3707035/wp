@@ -65,7 +65,9 @@ else{
 	$itemprice=$product[$item]['Price'];
   $itemqty=$_SESSION['cart'][$item]['qty'];
  	$itemtotal1=$itemprice*$itemqty;
- 	$itemtotal=number_format($itemtotal1,2);	
+ 	$itemtotal=number_format($itemtotal1,2);
+ $_SESSION['cart'][$item]['unitprice']=$itemprice;
+ $_SESSION['cart'][$item]['total']=$itemtotal;
     $grandtotal+= $itemtotal1;
  	echo "<table class='test'><div>";
  

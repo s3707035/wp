@@ -26,11 +26,20 @@ else{ ?>
 	 
     <div class="invoice">
 		     <div class="invoice-details">
-            Invoice No: <?php echo (mt_rand(0, 100));?> 
+            Order No: <?php echo (mt_rand(0, 100));?> 
             <br />
            <?php echo (date("d-m-Y"));?>
         </div>
-         
+          <div class="company-address">
+             Unit 0000
+            <br>
+            28371 Main Street 
+			<br>
+			Melbourne, Victoria
+            <br>
+			Australia, 3000.
+				<br>
+				</div>
         <div class="customer-address">
             To:
             <br />
@@ -45,8 +54,8 @@ else{ ?>
                 <tr>
                     <th width=200>Description</th>
                     <th width=100>Type</th>
-					<th width=80>Quanity</th>
-                    <th width=80>Unit price</th>
+					<th width=100>&nbsp;&nbsp;&nbsp;&nbsp;Quanity</th>
+                    <th width=80>&nbsp;&nbsp;Unit price</th>
                     <th width=80>Total price</th>
                 </tr>
  
@@ -60,12 +69,34 @@ else{ ?>
 			}
 	fclose($fp);
 	}       
+
+	 $BUYER= $_SESSION['buyer'];
+	 $CARTS= $_SESSION['cart'];
 	 
-	 $total = 0;
+	 $fd = fopen('orders.txt', 'a');
+ fputcsv($fd, $BUYER, "\t");
+   $arraykey= array_keys($CARTS);
+	$Data = "\t\t\t\t\t\t";
+	fwrite($fd, $Data);
+foreach($arraykey as $item){
+	$helpme = ($_SESSION['cart'][$item]);
+     fputcsv($fd, $helpme, "\t");
+	 $Data = "\t\t\t\t\t\t";
+fwrite($fd, $Data);
+}
+	  $new = "\n";
+	 fwrite($fd, $new);
+	 fclose($fd);
+	
+	
+	
+	
+	$total = 0;
     $CART= $_SESSION['cart'];
     $arraykey= array_keys($CART);
 	$grandtotal=0;
-   
+	 
+
 	foreach($arraykey as $item)
 {$itemprice=$product[$item]['Price'];
   $itemqty=$_SESSION['cart'][$item]['qty'];
@@ -74,12 +105,12 @@ else{ ?>
     $grandtotal+= $itemtotal1;
  $unitp="$".$product[$item]['Price'];
  $totalp="$".$itemtotal;
-
+ 
  					echo("<tr>");
                     echo("<td>{$product[$item]['Title']}</td>");
-	 				echo("<td class='text-center'>{$_SESSION['cart'][$item]['oid']}</td>");
+	 				echo("<td class='text-left'>{$_SESSION['cart'][$item]['oid']}</td>");
                     echo("<td class='text-center'>{$_SESSION['cart'][$item]['qty']}</td>");
-	                echo("<td class='text-right'>{$unitp}</td>");
+	                echo("<td class='text-righty'>{$unitp}</td>");
                     echo("<td class='text-right'>{$totalp}</td>");
                     echo("</tr>");
             }
@@ -88,25 +119,15 @@ else{ ?>
 $grandtotal= number_format($grandtotal,2);
 	 	$finaltots="Total: $".$grandtotal;
           echo "<br>";
+	 echo "<br>";
             echo "<div class='tots'>{$finaltots}</div>" ?>
             					
-       </body>
+       
  
    
-	    <div class="company-address">
-            Sell My Stuff
-            <br>
-            Unit 0000
-            <br>
-            28371 Main Street 
-			<br>
-			Melbourne, Victoria
-            <br>
-			Australia, 3000.
-				<br>
-				</div>
+	   
 	 
-	 
+	 </body>
 	 <footer>     
       <div class="footers">&copy;<script>
         document.write(new Date().getFullYear());

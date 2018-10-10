@@ -54,6 +54,9 @@ if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
 if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
 	{$priceforsub = $product[$id]['Price'];
  		$price = $priceforsub*$QTY;
+	  $id =$_POST['id'];
+
+  $_SESSION['cart'][$id]['pid'] = $id;
   $_SESSION['cart'][$id]['oid'] = $OID;
   $_SESSION['cart'][$id]['qty'] = $QTY;
 			
