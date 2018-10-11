@@ -7,25 +7,7 @@ topModule('checkout');?>
 	  
 	  	   <div class="title"><h2 >CHECKOUT</h2></div>
 	  
-<script>
-	function myCC() {
-	var a= "<img src='../../media/visa.png'>"
-	 
-	var card= /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
-	
-	var x = document.getElementById("cc").value;
-	var i = 0, xLength = x.length;
- 	for(i; i < xLength; i++) {
-    x = x.replace(" ", "");}
-	
-	if(card.test(x))
-	{document.getElementById("credit").innerHTML = a;}
-
-	else{return true;}
-	}
-
-		 </script>
-	  
+  
  <?php
 
 $firstnameErr = $surnameErr = $emailErr = $addressErr = $phoneErr = $ccErr = $expErr= "";
@@ -91,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $cc = test($_POST["cc"]);
 	$nscc = preg_replace('/\s+/','',$cc);
 		
-	if (!preg_match("/^([0-9]{12,16})$/", $nscc)) 
+	if (!preg_match("/^([0-9]{12,19})$/", $nscc)) 
 {$ccErr = "Please enter a valid credit card";
 $Cerror++;} 
 	    }
