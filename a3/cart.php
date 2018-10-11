@@ -1,6 +1,7 @@
-	
+	<?php session_start(); 
+include_once('tools.php'); ?>
 <!DOCTYPE html>
-<?php session_start(); ?>
+
 <html lang='en'>
 	  <head>
     <meta charset="utf-8">
@@ -93,12 +94,9 @@ echo "<div class='exptest'>$finaltotal$grandtotal</div>";
  <?php } ?>
    
 	 </body>
-<footer>
 	
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='product.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
+	<?php bottomModule();	
+	 	/* fdebugmodule();*/ ?>
  
 <script type="text/javascript">
     document.getElementById("checkout").onclick = function () {

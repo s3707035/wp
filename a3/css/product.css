@@ -214,10 +214,15 @@ header,
 	float:left;
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
-	position: fixed;
-	bottom:0;}
+	position: absolute;
+	margin-top: 200px;}
 
-footer,
+.footerspace{ text-align: left;
+	float: left;
+	font-family: 'Slabo 27px', serif, sans-serif;
+	font-size: 15px;
+margin-top:250px;}
+
 
 
 

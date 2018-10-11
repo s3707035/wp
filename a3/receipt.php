@@ -1,5 +1,7 @@
+
+<?php session_start(); 
+include_once('tools.php'); ?>
 <!DOCTYPE html>
-	<?php session_start(); ?>
 <html lang='en'>
 	  
     <meta charset="utf-8">
@@ -61,12 +63,14 @@ else{ ?>
  
   <?php
      $fp =fopen('product.txt', 'r');
+	 flock($fp, LOCK_SH);
 	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
 		while ($cells = fgetcsv($fp, 0, "\t") ) {
 			for ($x=1; $x<count($cells); $x++)
 				$product[$cells[0]][$headings[$x]]=$cells[$x];
 	
 			}
+		flock($fp, LOCK_UN);
 	fclose($fp);
 	}       
 
@@ -74,6 +78,7 @@ else{ ?>
 	 $CARTS= $_SESSION['cart'];
 	 
 	 $fd = fopen('orders.txt', 'a');
+	 flock($fd, LOCK_EX);
  fputcsv($fd, $BUYER, "\t");
    $arraykey= array_keys($CARTS);
 	$Data = "\t\t\t\t\t\t";
@@ -86,6 +91,7 @@ fwrite($fd, $Data);
 }
 	  $new = "\n";
 	 fwrite($fd, $new);
+	 flock($fd, LOCK_UN);
 	 fclose($fd);
 	
 	
@@ -123,16 +129,9 @@ $grandtotal= number_format($grandtotal,2);
             echo "<div class='tots'>{$finaltots}</div>" ?>
             					
        
- 
-   
-	   
 	 
-	 </body>
-	 <footer>     
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='product.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
-				
 
+	<?php bottomModule();	
+	 	 /*fdebugmodule();*/ ?>
+	 </body>
 </html>

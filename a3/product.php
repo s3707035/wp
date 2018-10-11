@@ -1,7 +1,8 @@
+<?php session_start(); 
+include_once('tools.php'); ?>
 <!DOCTYPE html>
 <html lang='en'>
-	<?php session_start(); ?>
-  <head>
+	  <head>
     <meta charset="utf-8">
     <meta name="Product" content="Product">
       
@@ -164,11 +165,9 @@ function minusFunction() {
 
 	
 	 
-<footer>
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='product.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
+
+	<?php bottomModule();	
+	 	 /*fdebugmodule()*/;?>
    
      </body>
     </html>

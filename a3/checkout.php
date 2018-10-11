@@ -1,5 +1,7 @@
+<?php session_start(); 
+include_once('tools.php'); ?>
 <!DOCTYPE html>
-<?php session_start(); ?>
+
 <html lang='en'>
   <head>
     <meta charset="utf-8">
@@ -53,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $firstname = test($_POST["firstname"]);
     
     if (!preg_match("/^[a-zA-Z .,'-]*$/",$firstname)) {
-      $firstnameErr = "Only letters and white space allowed"; 
+      $firstnameErr = "Please enter a valid firstname"; 
     $Cerror++;}
   }
   if (empty($_POST["surname"])) {
@@ -62,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $surname = test($_POST["surname"]);
     
 	  if (!preg_match("/^[a-zA-Z .,'-]*$/",$surname)) {
-      $surnameErr = "Only letters and white space allowed"; 
+      $surnameErr = "Please enter a valid surname"; 
     $Cerror++;}
   }
   
@@ -81,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $address = test($_POST["address"]);
     
     if (!preg_match("~^[-a-zA-Z0-9\s,\-\/.']*$~",$address)) {
-      $addressErr = "invalid entry"; 
+      $addressErr = "Please enter a valid address"; 
     $Cerror++;}}
 	  
 	if (empty($_POST["phone"])) {
@@ -93,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	  preg_match("/^([04]{2})([0-9]{8})$/",$phone)) 
   {}
 		else{
-     $phoneErr = "Please enter a valid 8 digit number starting with +614 or 04";} 
+     $phoneErr = "Not a valid number, please start with +614 or 04";} 
 	    $Cerror++;}
   
 	
@@ -105,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$nscc = preg_replace('/\s+/','',$cc);
 		
 	if (!preg_match("/^([0-9]{12,16})$/", $nscc)) 
-{$ccErr = "Please enter a valid credit card number";
+{$ccErr = "Please enter a valid credit card";
 $Cerror++;} 
 	    }
 
@@ -122,7 +124,7 @@ $Cerror++;}
 	$newncd= str_replace('-', '', $ncd);
 
 if ($expDatefirstdone < $newncd) {
-    $expErr = "credit card expiry date must be 28 days or longer";
+    $expErr = "Expiry date must be 28 days or longer";
 $Cerror++;
 } else {}}
 	
@@ -161,51 +163,49 @@ exit();
 
 
 	 <main>
+		  <table >
      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		 
+		
     	<div class="email">
-    	<label for="text"><b>First Name</b></label>
-    	<input type="text" id="first name" placeholder="First Name" name="firstname" value="<?php echo $firstname;?>" style=" height:30px;" required><span class="error"> <?php echo $firstnameErr;?></span><br>
-		 </div>
+			<tr><td></td><td><label for="text"><b>First Name</b></label>
+				<input type="text" id="first name" placeholder="First Name" name="firstname" value="<?php echo $firstname;?>" style=" height:30px;" required></td><td><span class="error"> <?php echo $firstnameErr;?></span></td></tr><br>
 		 
-		<div class="email">
-    	<label for="text"><b>Surname</b></label>
-    	<input type="text" id="surname" placeholder="Surname" name="surname" value="<?php echo $surname;?>" style=" height:30px;" required><span class="error"> <?php echo $surnameErr;?></span><br></div>
 		 
-		<div class="email">
-    	<label for="email"><b>Email</b></label>
-    	<input type="email" id="email" placeholder="Email Address" name="email" value="<?php echo $email;?>" style=" height:30px;" required><span class="error"> <?php echo $emailErr;?></span><br></div>
+		
+    	<tr><td></td><td><label for="text"><b>Surname</b></label>
+    	<input type="text" id="surname" placeholder="Surname" name="surname" value="<?php echo $surname;?>" style=" height:30px;" required></td><td><span class="error"> <?php echo $surnameErr;?></span></td></tr><br>
+			
+	
+    	<tr><td></td><td><label for="email"><b>Email</b></label>
+    	<input type="email" id="email" placeholder="Email Address" name="email" value="<?php echo $email;?>" style=" height:30px;" required></td><td><span class="error"> <?php echo $emailErr;?></span></td></tr><br>
 				 
-		<div class="email">
-    	<label for="email"><b>Address</b></label>
-			<textarea name="address" id="Address" placeholder="Enter Address" name="address" value="<?php echo $address;?>" style=" height:40px;" required></textarea><span class="error"> <?php echo $addressErr;?></span><br></div>
-		  
-        <div class="email">
-      	<label for="phone"><b>Phone Number</b></label>
-      	<input type="text" id="phone" placeholder="Enter Phone Number" name="phone" value="<?php echo $phone;?>" style=" height:30px;" required><span class="error"> <?php echo $phoneErr;?></span><br></div>
-      
-		 <div class="email">
-      	<label for="cc"><b>Credit Card</b></label>
-		<input type="text" id="cc" placeholder="Enter Credit Card" name="cc" oninput="myCC()" value="<?php echo $cc;?>" style=" height:30px;" required><a id="credit"></a><span class="error"> <?php echo $ccErr;?></span><br></div> 
+			<div class='break'></div>
+    	<tr><td></td><td><label for="email"><b>Address</b></label>
+			<textarea name="address" id="Address" placeholder="Enter Address" name="address" value="<?php echo $address;?>" style=" height:40px;" required></textarea></td><td><span class="error"> <?php echo $addressErr;?></span></td></tr><br>
+	
+      	<tr><td></td><td><label for="phone"><b>Phone Number</b></label>
+      	<input type="text" id="phone" placeholder="Enter Phone Number" name="phone" value="<?php echo $phone;?>" style=" height:30px;" required></td><td><span class="error"> <?php echo $phoneErr;?></span></td></tr><br>
+		
+			
+      	<tr><td></td><td><label for="cc"><b>Credit Card</b></label>
+		<input type="text" id="cc" placeholder="Enter Credit Card" name="cc" oninput="myCC()" value="<?php echo $cc;?>" style=" height:30px;" required></td><td><a id="credit"></a><span class="error"> <?php echo $ccErr;?></span></td></tr><br>
 		 
 		 
-		 <div class="email">
-		 <label for="exp"><b>Exp. Date</b></label>
-		 <input type="month" min="2018-09" max="2025-01" id="exp" value="<?php echo $exp;?>" name="exp" style=" height:30px;" required><span class="error"> <?php echo $expErr;?></span><br></div> 
+		
+		 <tr><td></td><td><label for="exp"><b>Exp. Date</b></label>
+		 <input type="month" min="2018-09" max="2025-01" id="exp" value="<?php echo $exp;?>" name="exp" style=" height:30px;" required></td><td><span class="error"> <?php echo $expErr;?></span></td></tr><br></div>
+		
 			 
-        <div><button type="submit" value="submit" class="button"><img src="../../media/buynow.png" alt="Submit" style="height:70px"/></button></div></form>
-		  
-
+			 <tr><td></td><td><div class='other'><button type="submit" value="submit" class="button"><img src="../../media/buynow.png" alt="Submit" style="height:70px"/></button></td><td></td></tr><br></div>
+		 
+		 </table>
+		 </form>
 
 	
 </main>
 	
-<footer>
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br>
-		  <a href='product.txt'>products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
+<?php bottomModule();	
+	 	 /*fdebugmodule();*/ ?>
    
        </body>
     </html>

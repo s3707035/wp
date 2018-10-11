@@ -27,8 +27,14 @@ body {
 	float:left;
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
-	position: sticky;
-    margin-top: 200px;}
+	position: relative;
+    margin-top: 150px;}
+
+.footerspace{ text-align: left;
+	float: left;
+	font-family: 'Slabo 27px', serif, sans-serif;
+	font-size: 15px;
+}
 
 .title {
   	font-family: 'Love Ya Like A Sister', cursive;

@@ -26,13 +26,23 @@ position:static;
 	  text-align: center
                     } 
 
-.footers {
+div.footers {
+	float:left;
+    font-family: 'Slabo 27px', serif, sans-serif;
+ 	font-size: 15px;
+	position: relative;
+	bottom: -440px;
+  }
+
+div.footerspace{
 	float:left;
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
 	position: absolute;
-	bottom: -300px;
-    }
+	margin-top: 500px;
+	
+}
+
 
     .invoice {
         border:1px solid #696969;
@@ -112,11 +122,13 @@ main{
 	margin-left: 580px;
 	font-weight: bold;
 	font-size: 23px;
+	
 }
 
 .bottom-text{
 	text-align: right}
 }
+
 
 
 
