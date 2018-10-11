@@ -1,23 +1,9 @@
+	<?php session_start(); 
+include_once('tools.php'); 
 
-<?php session_start(); 
-include_once('tools.php'); ?>
-<!DOCTYPE html>
-<html lang='en'>
-	  
-    <meta charset="utf-8">
-  
-      <head>
-    <title>receipt</title>
-     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" type="text/css"  rel="stylesheet" media="screen">
-     <link id='product' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/receipt.css">
-		
-  </head>
- <body>
-    <div class="header"> 
-	<nav>
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-		<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 /></a></nav></div>
-	
+topModule('receipt');?>
+</div></nav>
+
 <? php
 	
 if(empty($_SESSION['buyer']))

@@ -1,27 +1,12 @@
 <?php session_start(); 
-include_once('tools.php'); ?>
-<!DOCTYPE html>
+include_once('tools.php'); 
 
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <meta name="Checkout" content="checkout">
-  
-    
-    
-    <link id='skeletonlogin' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/skeletonlogin.css">
-	  
-    <header>
-    <div class="header"> 
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-	
-	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=300 />
-	<div class="overlay"></div></a>
+topModule('checkout');?>
 		
-    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
- </div> </header>
-	   <div><h2 class="title">CHECKOUT</h2></div>
-	  <body>
+		<link id='skeletonlogin' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/skeletonlogin.css"> </nav>
+	  
+	  	   <div class="title"><h2 >CHECKOUT</h2></div>
+	  
 <script>
 	function myCC() {
 	var a= "<img src='../../media/visa.png'>"

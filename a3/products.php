@@ -1,37 +1,24 @@
 <?php session_start(); 
-include_once('tools.php'); ?>
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <meta name="Product" content="Product">
-      
-    <title>Products</title>
-    
-   <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/skeletonproducts.css"></head>
-    
-	
+include_once('tools.php'); 
 
-
-
-
-
-	<body>
-	<div class="header"> <nav>
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
-	<div class="overlay"></div></a>
-	
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
+topModule('products');?>
+		
+		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
 	<p class="login">CART</p></a>
 		
 		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php" style="text-decoration:none">
 	<p class="products">CHECKOUT</p></a>
 	
 		
-    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
-	</nav></div>
-		  
+    </nav></div>
+
+		
+		
+		
+		
+		
+		
+		
 	<header><p class="head">Sale</p></header>
 <form action='processing.php' method='get'> 
 		<main>

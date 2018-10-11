@@ -31,7 +31,7 @@ div.footers {
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
 	position: relative;
-	bottom: -440px;
+	bottom: -520px;
   }
 
 div.footerspace{
@@ -39,7 +39,7 @@ div.footerspace{
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
 	position: absolute;
-	margin-top: 500px;
+	margin-top: 600px;
 	
 }
 

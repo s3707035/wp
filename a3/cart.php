@@ -1,24 +1,8 @@
 	<?php session_start(); 
-include_once('tools.php'); ?>
-<!DOCTYPE html>
+include_once('tools.php'); 
 
-<html lang='en'>
-	  <head>
-    <meta charset="utf-8">
-    <meta name="cart" content="cart">
-      
-    <title>cart</title>
-     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" type="text/css"  rel="stylesheet" media="screen">
-     <link id='product' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/cart.css">
-		
-  </head>
-   <body>
-    <div class="header"> 
-	<nav>
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
-		<div class="overlay"></div></a>
-		   
+topModule('cart');?>
+	   
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
 	<p class="products">PRODUCTS</p></a>
 	
@@ -96,7 +80,7 @@ echo "<div class='exptest'>$finaltotal$grandtotal</div>";
 	 </body>
 	
 	<?php bottomModule();	
-	 	/* fdebugmodule();*/ ?>
+	 	 /*fdebugmodule();*/ ?>
  
 <script type="text/javascript">
     document.getElementById("checkout").onclick = function () {

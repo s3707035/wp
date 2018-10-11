@@ -1,4 +1,51 @@
 <?php
+function topModule($pagetitle){
+$outputT = <<<"TOP"
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="$pagetitle" content="$pagetitle">
+      
+    <title>$pagetitle</title>
+    
+  
+	  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
+	</head>
+	
+    <body>
+	<div class="header"> <nav>
+	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
+	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
+	<div class="overlay"></div></a>
+	 <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/$pagetitle.css">	
+		
+TOP;
+	echo $outputT;
+		
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function bottomModule() {
     $output = <<<"BOTTOM"
  <footer>

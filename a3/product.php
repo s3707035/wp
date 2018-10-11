@@ -1,22 +1,9 @@
 <?php session_start(); 
-include_once('tools.php'); ?>
-<!DOCTYPE html>
-<html lang='en'>
-	  <head>
-    <meta charset="utf-8">
-    <meta name="Product" content="Product">
-      
-    <title>Product</title>
-    
-   <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/product.css"></head>
-   <body>
-    <div class="header"> 
-	<nav>
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
-		<div class="overlay"></div></a>
-		   
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
+include_once('tools.php'); 
+topModule('product');?>
+		
+		
+		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
 	<p class="products">PRODUCTS</p></a>
 	
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
