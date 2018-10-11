@@ -1,45 +1,16 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <title>Assignment 3</title>
 
-    <!-- Keep wireframe.css for debugging, add your css to style.css -->
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/home.css">
-    <script src='../wireframe.js'></script>
-    <style>
-      <?php
-        // This PHP code inserts CSS to style the "current page" link in the nav area
-        $here = $_SERVER['SCRIPT_NAME']; 
-        $bits = explode('/',$here); 
-        $filename = $bits[count($bits)-1]; 
-        echo "nav a[href$='$filename']";
-      ?>
-      
-    </style>
-  </head>
+<?php session_start(); 
+include_once('tools.php'); 
 
-  <body>
-	<div class="header"> <nav>
-
-		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
-	 	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
-		<div class="overlay"></div></a>
+topModule('index');
 		      
-		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/product.php" style="text-decoration:none">
-		<p class="product">PRODUCT</p></a>
+menus('products', 'cart', 'checkout', 'PRODUCTS', 'CART', 'CHECKOUT')?>
 		
-		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
-		<p class="product">PRODUCTS</p></a>
-		
-		<a href="#Aboutus" style="text-decoration:none">
-		<p class="aboutus">ABOUT</p></a>
-		
+	
 		<a href="#Contactus" style="text-decoration:none">
 		<p class="contactus">CONTACT</p></a>
 		
-		<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Slabo+27px" rel="stylesheet">
+
 		</nav></div>
 	
 		 
@@ -81,11 +52,9 @@
 				</table>
 				</main>
 		
-    <footer>
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='products.txt'>products spreadsheet</a>/<a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
+   
+	<?php bottomModule();	
+	 	 /*fdebugmodule();*/ ?>
    
   </body>
 </html>

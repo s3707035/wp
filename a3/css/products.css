@@ -40,7 +40,7 @@ main{
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
 	position: sticky;
-    margin-top: 700px;}
+    margin-top: 500px;}
 
 
 aside,
@@ -231,6 +231,12 @@ p.title {
 	height: 200px;
 	background: url("https://titan.csit.rmit.edu.au/~s3707035/media/ofish1.JPG") no-repeat;}
 
+.footerspace{ 
+	text-align: left;
+	float: left;
+	font-family: 'Slabo 27px', serif, sans-serif;
+	font-size: 15px;
+margin-top:600px;}
 
 
 

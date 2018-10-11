@@ -1,24 +1,12 @@
 <?php session_start(); 
 include_once('tools.php'); 
 
-topModule('products');?>
-		
-		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php" style="text-decoration:none">
-	<p class="login">CART</p></a>
-		
-		<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php" style="text-decoration:none">
-	<p class="products">CHECKOUT</p></a>
-	
-		
-    </nav></div>
+topModule('products');
 
+menus('product', 'cart', 'checkout', 'PRODUCT', 'CART', 'CHECKOUT')?>
 		
-		
-		
-		
-		
-		
-		
+				
+	</nav></div>	
 	<header><p class="head">Sale</p></header>
 <form action='processing.php' method='get'> 
 		<main>
@@ -70,11 +58,8 @@ topModule('products');?>
 		    </table>
 		    </main>
 	</form>
-<footer>
-      <div class="footers">&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Valerie Lok, s3707035 <br><a href='product.txt'>    products spreadsheet</a><br><a href='orders.txt'>orders spreadsheet</a></div>
-    </footer>
+<?php bottomModule();	
+	 	/*fdebugmodule();*/?>
 
 		
      </body>

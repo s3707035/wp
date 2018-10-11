@@ -15,6 +15,13 @@ header{
   margin-top: 10px;
   padding: 5px;} 
 
+.footerspace{
+		position: absolute;
+	float: left;
+	font-family: 'Slabo 27px', serif, sans-serif;
+	font-size: 15px;
+	margin-top: 1200px;}
+
 button{
   border: none;
   background: transparent;}
@@ -23,6 +30,9 @@ nav{
 	position:absolute;
 	top:13px;
 	left:13px;}
+
+
+
 
 table, th, td{
 	margin-left: 220px;    
@@ -212,5 +222,7 @@ nav,
     font-family: 'Slabo 27px', serif, sans-serif;
  	font-size: 15px;
 	position:fixed;
+	
 	bottom:0px; }
+
 

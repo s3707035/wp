@@ -18,32 +18,13 @@ $outputT = <<<"TOP"
 	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/index.php">
 	<img src='../../media/logo%20(copy).png' alt='Sell My Stuff Logo' height=200 />
 	<div class="overlay"></div></a>
-	 <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/$pagetitle.css">	
+	 <link id='products' type="text/css" rel="stylesheet" href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/css/$pagetitle.css">
+	<script src='wireframe.js'></script>
+
 		
 TOP;
 	echo $outputT;
-		
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		}
 
 
   function bottomModule() {
@@ -77,11 +58,28 @@ $lines = file($_SERVER['SCRIPT_FILENAME']);
 	  echo "<div class='footerspace'>";
 	 			preShow($_POST);
 	 			preShow($_SESSION);
-	 			$aaarg = preShow($my_bad_array, true);
-	 			echo "Why is \n $aaarg \n not working?";
+	 			
 		        printmycode();
-				echo "/div>";
+				echo "</div>";
  }
+
+
+
+
+function menus($c1, $c2, $c3, $c1a, $c2a, $c3a){
+	$menus = <<<"menus"
+	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/$c1.php" style="text-decoration:none">
+	<p class="products">$c1a</p></a>
+	
+	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/$c2.php" style="text-decoration:none">
+	<p class="products">$c2a</p></a>
+	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/$c3.php" style="text-decoration:none">
+	<p class="products">$c3a</p></a>
+        
+menus;
+	echo $menus;
+	
+}
 
 
 ?>

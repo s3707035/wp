@@ -1,16 +1,16 @@
 	<?php session_start(); 
 include_once('tools.php'); 
 
-topModule('cart');?>
-	   
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php" style="text-decoration:none">
-	<p class="products">PRODUCTS</p></a>
-	
-	<a href="https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php" style="text-decoration:none">
-	<p class="login">CHECKOUT</p></a>
-    
-  </nav></div>
-	 <div><h2 class="title">CART</h2></div>
+topModule('cart');
+menus('product', 'products', 'checkout', 'PRODUCT', 'PRODUCTS', 'CHECKOUT')?>
+
+
+
+
+
+</nav></div>
+
+<div><h2 class="title">CART</h2></div>
 	   <div class="cancel">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		
@@ -25,15 +25,17 @@ topModule('cart');?>
   header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php");
 			 exit();}
 	   
-	$fp =fopen('product.txt', 'r');
+	  	  $fp =fopen('product.txt', 'r');
+flock($fp, LOCK_SH);
 	if (($headings = fgetcsv($fp, 0, "\t")) !== false){
 		while ($cells = fgetcsv($fp, 0, "\t") ) {
 			for ($x=1; $x<count($cells); $x++)
 				$product[$cells[0]][$headings[$x]]=$cells[$x];
-	
 			}
+		flock($fp, LOCK_UN);
 	fclose($fp);
 	}
+	   
 if(empty($_SESSION['cart'])){ 
 		   echo "<div><h2 class='empty'>CART IS EMPTY</h2></div>";
 	   }
@@ -68,26 +70,19 @@ $finaltotal= 'Final Total: $';
 echo "<div class='exptest'>$finaltotal$grandtotal</div>";
 
 
-
-
 ?>	   
 	   
 
 <div class="checkout">
-	<button id="checkout" class="button" name="checkout" value=""><img src="../../media/checkout.png" alt="Submit" style="height:100px"/></button></div>
+	<button id="checkout" class="button" name="checkout" onclick="checkout()" value=""><img src="../../media/checkout.png" alt="Submit" style="height:100px"/></button></div>
  <?php } ?>
    
 	 </body>
 	
 	<?php bottomModule();	
-	 	 /*fdebugmodule();*/ ?>
+	 /*	 fdebugmodule(); */?>
  
-<script type="text/javascript">
-    document.getElementById("checkout").onclick = function () {
-        location.href = "https://titan.csit.rmit.edu.au/~s3707035/wp/a3/checkout.php";
-    };
-	
-</script>
+
 	
     </html>
 
