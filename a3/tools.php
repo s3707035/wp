@@ -56,7 +56,8 @@ $lines = file($_SERVER['SCRIPT_FILENAME']);
 
  function fdebugmodule(){
 	  echo "<div class='footerspace'>";
-	 			preShow($_POST);
+	 preShow($_GET);			
+	 preShow($_POST);
 	 			preShow($_SESSION);
 	 			
 		        printmycode();

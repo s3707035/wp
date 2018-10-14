@@ -80,7 +80,7 @@ echo "<div class='exptest'>$finaltotal$grandtotal</div>";
 	 </body>
 	
 	<?php bottomModule();	
-	 /*	 fdebugmodule(); */?>
+	 		 /*fdebugmodule();*/ ?>
  
 
 	

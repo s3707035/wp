@@ -15,4 +15,3 @@ melbourne aust"
 						S201	8Mens	100	50.00	5,000.00
 						P029	Small	3	10.00	30.00
 						P028	Small	1	12.00	12.00
-

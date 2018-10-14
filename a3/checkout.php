@@ -13,8 +13,9 @@ topModule('checkout');?>
 $firstnameErr = $surnameErr = $emailErr = $addressErr = $phoneErr = $ccErr = $expErr= "";
 $firstname = $surname = $email = $address = $phone = $cc = $exp= "";
 $Cerror=0;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-	
+
   if (empty($_POST["firstname"])) {
     $firstnameErr = "first name is required";
     $Cerror++; }
@@ -62,8 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	  preg_match("/^([04]{2})([0-9]{8})$/",$phone)) 
   {}
 		else{
-     $phoneErr = "Not a valid number, please start with +614 or 04";} 
-	    $Cerror++;}
+     $phoneErr = "Not a valid number, please start with +614 or 04"; 
+	    $Cerror++;}}
   
 	
   
@@ -105,14 +106,14 @@ function test($data) {
   return $data;
 }
 
-if(($Cerror<=1) && $_SERVER["REQUEST_METHOD"] == "POST")
+if(($Cerror==0) && $_SERVER["REQUEST_METHOD"] == "POST")
 {   $date=date("d-m-Y");
-	$fname=$_POST["firstname"];
-	$sname=$_POST["surname"];
-	$emails=$_POST["email"];
-	$phones=$_POST["phone"];
-	$addy=$_POST["address"];
-$_SESSION['buyer']['date'] = $date;
+ $fname=htmlentities($_POST["firstname"], ENT_QUOTES);
+ $sname=htmlentities($_POST["surname"], ENT_QUOTES);
+ $emails=htmlentities($_POST["email"], ENT_QUOTES);
+ $phones=htmlentities($_POST["phone"], ENT_QUOTES);
+ $addy=htmlentities($_POST["address"], ENT_QUOTES);
+ $_SESSION['buyer']['date'] = $date;
 $_SESSION['buyer']['firstname'] = $fname;
 $_SESSION['buyer']['surname'] = $sname;
 $_SESSION['buyer']['email'] = $emails;

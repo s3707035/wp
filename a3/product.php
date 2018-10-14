@@ -29,6 +29,7 @@ if (isset($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
 	$nextOID=$product[$nextid]['OID'];
 	$currentOID=$product[$id]['OID'];
 	
+	
 if($OID==$nextOID || $OID==$currentOID && $QTY>=1 && $isvalid==1)
 	{$priceforsub = $product[$id]['Price'];
  		$price = $priceforsub*$QTY;
@@ -46,7 +47,7 @@ header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/cart.php");
 	 $item= $_GET['id'];
 	   $isvalid= array_key_exists($item,$product); 
 
-if (!isset($_GET['id']) &&($isvalid!==true))
+if (!isset($_GET['id']) || ($isvalid!==true))
 {
 header("Location: https://titan.csit.rmit.edu.au/~s3707035/wp/a3/products.php"); 
 exit();}
@@ -108,7 +109,7 @@ exit();}
 	 
 
 	<?php bottomModule();	
-	 	 /*fdebugmodule()*/;?>
+	 	 /*fdebugmodule();*/ ?>
    
      </body>
     </html>

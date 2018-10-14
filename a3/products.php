@@ -59,7 +59,7 @@ menus('product', 'cart', 'checkout', 'PRODUCT', 'CART', 'CHECKOUT')?>
 		    </main>
 	</form>
 <?php bottomModule();	
-	 	/*fdebugmodule();*/?>
+	 		 /*fdebugmodule();*/ ?>
 
 		
      </body>

@@ -118,6 +118,6 @@ $grandtotal= number_format($grandtotal,2);
 	 
 
 	<?php bottomModule();	
-	 	 /*fdebugmodule();*/ ?>
+		 /*fdebugmodule();*/ ?>
 	 </body>
 </html>
